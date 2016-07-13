@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  iOS-tic-tac-toe
-//
-//  Created by Becca Nelson on 7/13/16.
-//  Copyright © 2016 8th Light. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
