@@ -13,6 +13,9 @@
 		8836214B1D369F73007F43D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8836214A1D369F73007F43D0 /* Assets.xcassets */; };
 		8836214E1D369F73007F43D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */; };
 		883621591D369F73007F43D0 /* iOS_tic_tac_toeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621581D369F73007F43D0 /* iOS_tic_tac_toeTests.swift */; };
+		883621641D369FB8007F43D0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 883621631D369FB8007F43D0 /* Podfile */; };
+		883621661D36A13F007F43D0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621651D36A13F007F43D0 /* GameViewController.swift */; };
+		CA454227A547F65C8BF7A4B4 /* Pods_iOS_tic_tac_toeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E794CE3F7478DA0F6F39BBD /* Pods-iOS-tic-tac-toeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-tic-tac-toeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests.release.xcconfig"; sourceTree = "<group>"; };
+		38008FD060ED225BDB80F083 /* Pods-iOS-tic-tac-toeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-tic-tac-toeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_tic_tac_toeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621401D369F73007F43D0 /* iOS-tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621431D369F73007F43D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		883621451D369F73007F43D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		883621541D369F73007F43D0 /* iOS-tic-tac-toeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-tic-tac-toeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621581D369F73007F43D0 /* iOS_tic_tac_toeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_tic_tac_toeTests.swift; sourceTree = "<group>"; };
 		8836215A1D369F73007F43D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883621631D369FB8007F43D0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		883621651D36A13F007F43D0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA454227A547F65C8BF7A4B4 /* Pods_iOS_tic_tac_toeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +68,12 @@
 		883621371D369F73007F43D0 = {
 			isa = PBXGroup;
 			children = (
+				883621631D369FB8007F43D0 /* Podfile */,
 				883621421D369F73007F43D0 /* iOS-tic-tac-toe */,
 				883621571D369F73007F43D0 /* iOS-tic-tac-toeTests */,
 				883621411D369F73007F43D0 /* Products */,
+				E429A8A1D6519433B5FC9A1E /* Pods */,
+				E3BBC9C21684FA412EC1CD07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +89,7 @@
 		883621421D369F73007F43D0 /* iOS-tic-tac-toe */ = {
 			isa = PBXGroup;
 			children = (
+				883621651D36A13F007F43D0 /* GameViewController.swift */,
 				883621431D369F73007F43D0 /* AppDelegate.swift */,
 				883621451D369F73007F43D0 /* ViewController.swift */,
 				883621471D369F73007F43D0 /* Main.storyboard */,
@@ -94,6 +107,23 @@
 				8836215A1D369F73007F43D0 /* Info.plist */,
 			);
 			path = "iOS-tic-tac-toeTests";
+			sourceTree = "<group>";
+		};
+		E3BBC9C21684FA412EC1CD07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E429A8A1D6519433B5FC9A1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38008FD060ED225BDB80F083 /* Pods-iOS-tic-tac-toeTests.debug.xcconfig */,
+				1E794CE3F7478DA0F6F39BBD /* Pods-iOS-tic-tac-toeTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 883621601D369F73007F43D0 /* Build configuration list for PBXNativeTarget "iOS-tic-tac-toeTests" */;
 			buildPhases = (
+				0BA577735B4659DFDC486A19 /* [CP] Check Pods Manifest.lock */,
 				883621501D369F73007F43D0 /* Sources */,
 				883621511D369F73007F43D0 /* Frameworks */,
 				883621521D369F73007F43D0 /* Resources */,
+				FDCDEC89147FDF3D002009F7 /* [CP] Embed Pods Frameworks */,
+				EEB148A2C0A6298AFC0A8DF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +212,7 @@
 			files = (
 				8836214E1D369F73007F43D0 /* LaunchScreen.storyboard in Resources */,
 				8836214B1D369F73007F43D0 /* Assets.xcassets in Resources */,
+				883621641D369FB8007F43D0 /* Podfile in Resources */,
 				883621491D369F73007F43D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,12 +226,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BA577735B4659DFDC486A19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB148A2C0A6298AFC0A8DF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDCDEC89147FDF3D002009F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8836213C1D369F73007F43D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				883621461D369F73007F43D0 /* ViewController.swift in Sources */,
+				883621661D36A13F007F43D0 /* GameViewController.swift in Sources */,
 				883621441D369F73007F43D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +432,7 @@
 		};
 		883621611D369F73007F43D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38008FD060ED225BDB80F083 /* Pods-iOS-tic-tac-toeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "iOS-tic-tac-toeTests/Info.plist";
@@ -361,6 +445,7 @@
 		};
 		883621621D369F73007F43D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E794CE3F7478DA0F6F39BBD /* Pods-iOS-tic-tac-toeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "iOS-tic-tac-toeTests/Info.plist";
@@ -390,6 +475,7 @@
 				8836215F1D369F73007F43D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		883621601D369F73007F43D0 /* Build configuration list for PBXNativeTarget "iOS-tic-tac-toeTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +484,7 @@
 				883621621D369F73007F43D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
