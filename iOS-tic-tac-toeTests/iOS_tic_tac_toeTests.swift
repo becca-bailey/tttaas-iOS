@@ -59,10 +59,6 @@ class GameViewControllerSpec: QuickSpec {
                 button.enabled = true
             }
             
-            it ("can display the current player") {
-                
-            }
-            
             it ("can clear a board") {
                 let xButton = UIButton()
                 xButton.setBackgroundImage(xMarker, forState: .Normal)
