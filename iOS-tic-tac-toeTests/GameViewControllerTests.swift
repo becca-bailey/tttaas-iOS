@@ -72,18 +72,6 @@ class GameViewControllerSpec: QuickSpec {
                 expect(gameController.boardArray).to(equal(["","","","","","","","",""]))
             }
             
-            it("returns text that includes the Player 1's name") {
-                let xTurn = true
-                let nextPlayerText = gameController.getPlayerLabel(xTurn)
-                expect(nextPlayerText).to(contain("Player 1"))
-            }
-            
-            it("returns text that includes the Player 2's name") {
-                let xTurn = false
-                let nextPlayerText = gameController.getPlayerLabel(xTurn)
-                expect(nextPlayerText).to(contain("Player 2"))
-            }
-            
             it ("can set a label to include the current player's name") {
                 let playerLabel = UILabel()
                 playerLabel.text = ""

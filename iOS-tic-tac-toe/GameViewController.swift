@@ -4,7 +4,10 @@ public class GameViewController: UIViewController {
     var xTurn = true;
     var hasWinner: Bool?
     var gameOver:Bool = false;
-    public var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
+    let emptyBoard: [String] = ["", "", "", "", "", "", "", "", ""]
+    var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
+    let serverURL = "http://localhost:5000/game"
+
     @IBOutlet public weak var boardStackView: UIStackView!
     @IBOutlet public weak var playerTurnLabel: UILabel!
     
@@ -16,18 +19,21 @@ public class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    public func getPlayerLabel(xTurn: Bool) -> String {
-        var currentPlayerNumber = 1
-        if (xTurn) {
-            currentPlayerNumber = 1
-        } else {
-            currentPlayerNumber = 2
-        }
-        return "Player \(currentPlayerNumber)'s Turn!"
+    @IBAction public func markerButtonClicked(sender: UIButton) {
+        let playerMarker = getCurrentPlayerMarker(xTurn)
+        let resizedImage = scaleImage(playerMarker, button: sender)
+        setSpotToMarker(resizedImage, button: sender)
+        disableBoardSpot(sender)
+        
+        let currentBoard = getUpdatedBoardArray(sender.tag)
+        let status = getGameStatus(makeRequest(currentBoard))
+        self.gameOver = gameIsOver(status)
+        
+        completeTurn(status)
     }
     
     public func setPlayerLabel(label: UILabel, xTurn: Bool) {
-        label.text = getPlayerLabel(xTurn)
+        label.text = UIConfig.getPlayerLabel(xTurn)
     }
     
     @IBAction func resetGame() {
@@ -38,8 +44,7 @@ public class GameViewController: UIViewController {
     }
     
     public func clearBoardArray() {
-        let emptyBoardArray: [String] = ["", "", "", "", "", "", "", "", ""]
-        boardArray = emptyBoardArray
+        boardArray = emptyBoard
     }
     
     public func clearBoard(boardStackView: UIStackView) {
@@ -68,18 +73,18 @@ public class GameViewController: UIViewController {
     public func getCurrentPlayerMarker(xTurn: Bool) -> UIImage {
         var playerMarker: UIImage?
         if (xTurn) {
-            playerMarker = UIImage(named: "letter-x")
+            playerMarker = UIImage(named: UIConfig.player1Image)
         } else {
-            playerMarker = UIImage(named: "letter-o")
+            playerMarker = UIImage(named: UIConfig.player2Image)
         }
         return playerMarker!
     }
     
     public func getCurrentPlayerMarkerText(xTurn: Bool) -> String {
         if (xTurn) {
-            return "X"
+            return UIConfig.player1
         } else {
-            return "O"
+            return UIConfig.player2
         }
     }
     
@@ -92,11 +97,8 @@ public class GameViewController: UIViewController {
         return boardArray
     }
     
-    public func createJSONBoard() -> [String: AnyObject] {
-        let jsonObject: [String: AnyObject] = [
-            "board": boardArray
-        ]
-        return jsonObject
+    public func createJSONBoard(currentBoard: [String]) -> String {
+        return "[\"board\": \(currentBoard.description)]"
     }
     
     public func spotsEnabled(boardStackView: UIStackView, enabled: Bool) {
@@ -117,15 +119,16 @@ public class GameViewController: UIViewController {
     }
     
     public func endGame(boardView: UIStackView, gameLabel: UILabel, status: String) {
-        if (status == "Win" && xTurn) {
-            gameLabel.text = "X Wins!!"
-        } else if (status == "Win" && !xTurn){
-            gameLabel.text = "O Wins!!"
-        } else if (status == "Tie") {
-            gameLabel.text = "It's a tie!!"
+        if (status == Status.win && xTurn) {
+            gameLabel.text = UIConfig.winnerMessage(UIConfig.player1)
+        } else if (status == Status.win && !xTurn){
+            gameLabel.text = UIConfig.winnerMessage(UIConfig.player2)
+        } else if (status == Status.tie) {
+            gameLabel.text = UIConfig.tieMessage
         }
         spotsEnabled(boardView, enabled: false)
     }
+    
     
     public func nextTurn(boardView: UIStackView, gameLabel: UILabel) {
         xTurn = !xTurn
@@ -134,7 +137,7 @@ public class GameViewController: UIViewController {
     
     
     public func makeRequest(currentBoard: [String]) -> NSData? {
-        return NetworkManager.makePOSTRequest("http://localhost:5000/game", body: "[\"board\": \(currentBoard.description)]")
+        return NetworkManager.makePOSTRequest(serverURL, body: createJSONBoard(currentBoard))
     }
     
     public func getGameStatus(responseData: NSData?) -> String {
@@ -146,20 +149,7 @@ public class GameViewController: UIViewController {
     }
     
     public func gameIsOver(status: String) -> Bool {
-        return (status == "Win") || (status == "Tie")
+        return (status == Status.win) || (status == Status.tie)
     }
     
-    
-    @IBAction public func markerButtonClicked(sender: UIButton) {
-        let playerMarker = getCurrentPlayerMarker(xTurn)
-        let resizedImage = scaleImage(playerMarker, button: sender)
-        setSpotToMarker(resizedImage, button: sender)
-        disableBoardSpot(sender)
-        
-        let currentBoard = getUpdatedBoardArray(sender.tag)
-        let status = getGameStatus(makeRequest(currentBoard))
-        self.gameOver = gameIsOver(status)
-
-        completeTurn(status)
-    }
 }
