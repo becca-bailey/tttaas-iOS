@@ -1,17 +1,34 @@
-# Becca and Tom's iOS Tic Tac Toe [![Build Status](https://travis-ci.org/beccanelson/iOS-tic-tac-toe.svg?branch=master)](https://travis-ci.org/beccanelson/iOS-tic-tac-toe)
+# Becca and Tom's iOS Tic Tac Toe ![Build Status](https://travis-ci.org/beccanelson/tttaas-iOS.svg?branch=master)
 
 This is the iOS front-end of a tic-tac-toe application built in Clojure.
 
-## Project setup
+## Dependencies:
++ [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
++ [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
++ [Maven](https://maven.apache.org/)
++ [Leiningen](http://leiningen.org/)
++ [Becca and Tom's tic tac toe server](https://github.com/beccanelson/tttaas-project)
 
-To setup the project in Xcode
+## Project Setup:
 
-[Install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
++ Clone the [tic tac toe server](https://github.com/beccanelson/tttaas-project) and follow setup instructions
 
-In the command line:
-`git clone git@github.com:beccanelson/iOS-tic-tac-toe.git`
++ Clone this repository in another folder
 
-In Xcode:
-open `iOS-tic-tac-toe.xcworkspace`
++ Inside the root directory of this project: `pod install`
 
-From here, you can build, test, and view files.
+## To Play:
+
++ Navigate to the server, and run using `./server` (Maven must be installed)
+
++ Open `tttaas-iOS/iOS-tic-tac-toe.xcworkspace` in Xcode.
+
++ Inside Xcode, you can build the project using the build button in the upper left corner.
+
++ With the server running, play the game using the iOS simulator.
+
+**Alternately, to build and test the project in the command line:**
+
+```
+xcodebuild -workspace iOS-tic-tac-toe.xcworkspace -scheme iOS-tic-tac-toe -sdk iphonesimulator build test
+```
