@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ComputerVsHuman.png",
+      "filename" : "ComputerVsPlayer.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ComputerVsHuman256.png",
       "scale" : "2x"
     },
     {
