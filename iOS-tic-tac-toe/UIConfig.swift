@@ -9,6 +9,9 @@ public class UIConfig {
     public static let player1Image = "letter-x"
     public static let player2Image = "letter-o"
     
+    public static let humanVsComputerImage = "HumanVsComputer"
+    public static let computerVsHumanImage = "ComputerVsHuman"
+    
     public static func winnerMessage(marker: String) -> String {
         return marker + " Wins!!"
     }
