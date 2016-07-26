@@ -97,9 +97,9 @@ public class GameViewController: UIViewController {
         boardArray[index] = getCurrentPlayerMarkerText(xTurn)
         return boardArray
     }
-    
-    public func createJSONBoard(currentBoard: [String]) -> String {
-        return "[\"board\": \(currentBoard.description)]"
+
+    public func createJSONRequestBody(currentBoard: [String]) -> String {
+        return "{\"board\": \(currentBoard.description), \"gameType\": \(GameConfig.gameType)}"
     }
     
     public func spotsEnabled(boardStackView: UIStackView, enabled: Bool) {
@@ -138,7 +138,7 @@ public class GameViewController: UIViewController {
     
     
     public func makeRequest(currentBoard: [String]) -> NSData? {
-        return NetworkManager.makePOSTRequest(serverURL, body: createJSONBoard(currentBoard))
+        return NetworkManager.makePOSTRequest(serverURL, body: createJSONRequestBody(currentBoard))
     }
     
     public func getGameStatus(responseData: NSData?) -> String {
