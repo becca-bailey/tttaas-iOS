@@ -1,9 +1,9 @@
 import UIKit
 
 public class GameViewController: UIViewController {
-    var xTurn = true;
+    var xTurn = true
     var hasWinner: Bool?
-    var gameOver:Bool = false;
+    var gameOver:Bool = false
     let emptyBoard: [String] = ["", "", "", "", "", "", "", "", ""]
     var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
     let serverURL = "http://localhost:5000/game"
@@ -13,6 +13,7 @@ public class GameViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        setPlayerLabel(playerTurnLabel, xTurn: true)
     }
 
     override public func didReceiveMemoryWarning() {
@@ -33,7 +34,7 @@ public class GameViewController: UIViewController {
     }
     
     public func setPlayerLabel(label: UILabel, xTurn: Bool) {
-        label.text = UIConfig.getPlayerLabel(xTurn)
+        label.text = UIConfig.getPlayerLabel(xTurn, gameType: GameConfig.gameType)
     }
     
     @IBAction func resetGame() {

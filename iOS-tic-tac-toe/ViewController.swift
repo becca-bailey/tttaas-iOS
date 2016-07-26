@@ -12,6 +12,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func newPlayerVsPlayerGame(sender: UIButton) {
+        GameConfig.gameType = GameConfig.humanVsHuman
+    }
+    
+    @IBAction func newPlayerVsComputerGame(sender: UIButton) {
+        if (sender.tag == 0) {
+            GameConfig.gameType = GameConfig.humanVsComputer
+        } else {
+            GameConfig.gameType = GameConfig.computerVsHuman
+        }
+    }
     
     @IBOutlet weak var gameTypeImage: UIImageView!
     @IBOutlet weak var gameTypeLink: UIButton!
@@ -30,12 +41,13 @@ class ViewController: UIViewController {
     }
     
     func toggleGameTypeLink() {
-        if (gameTypeLink.titleLabel!.text == "Player vs. Computer") {
-            gameTypeLink.setTitle("Computer vs. Player", forState: .Normal)
+        if (gameTypeLink.tag == 0) {
+            gameTypeLink.setTitle(UIConfig.computerVsPlayerLabel, forState: .Normal)
+            gameTypeLink.tag = 1
         } else {
-            gameTypeLink.setTitle("Player vs. Computer", forState: .Normal)
+            gameTypeLink.setTitle(UIConfig.playerVsComputerLabel, forState: .Normal)
+            gameTypeLink.tag = 0
         }
-        
     }
 }
 

@@ -10,6 +10,8 @@
 		88054C091D4278150064CE60 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C081D4278150064CE60 /* Status.swift */; };
 		88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0A1D4279850064CE60 /* UIConfig.swift */; };
 		88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */; };
+		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
+		8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */; };
 		883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* NetworkManager.swift */; };
 		883089E61D40265600D79AA7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E51D40265600D79AA7 /* NetworkManagerTests.swift */; };
 		883621441D369F73007F43D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621431D369F73007F43D0 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 		88054C081D4278150064CE60 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		88054C0A1D4279850064CE60 /* UIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 		88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfigTests.swift; sourceTree = "<group>"; };
+		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
+		8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		883089E31D40137100D79AA7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		883089E51D40265600D79AA7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		883621401D369F73007F43D0 /* iOS-tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,7 @@
 				883089E31D40137100D79AA7 /* NetworkManager.swift */,
 				88054C081D4278150064CE60 /* Status.swift */,
 				88054C0A1D4279850064CE60 /* UIConfig.swift */,
+				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
 			);
 			path = "iOS-tic-tac-toe";
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				8836215A1D369F73007F43D0 /* Info.plist */,
 				883089E51D40265600D79AA7 /* NetworkManagerTests.swift */,
 				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
+				8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */,
 			);
 			path = "iOS-tic-tac-toeTests";
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			files = (
 				883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */,
 				88054C091D4278150064CE60 /* Status.swift in Sources */,
+				8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */,
 				883621461D369F73007F43D0 /* ViewController.swift in Sources */,
 				88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */,
 				883621661D36A13F007F43D0 /* GameViewController.swift in Sources */,
@@ -309,6 +316,7 @@
 			files = (
 				883089E61D40265600D79AA7 /* NetworkManagerTests.swift in Sources */,
 				883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */,
+				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,
 				88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

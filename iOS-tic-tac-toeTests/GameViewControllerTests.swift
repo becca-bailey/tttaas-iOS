@@ -166,9 +166,7 @@ class GameViewControllerSpec: QuickSpec {
         xButton.setBackgroundImage(xMarker, forState: .Normal)
         let boardRowView = self.createBoardElement(xButton)
         let boardView = self.createBoardElement(boardRowView)
-        print(boardView)
         return boardView
-    }
-    
+    }    
 }
 
