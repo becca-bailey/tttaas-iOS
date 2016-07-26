@@ -1,5 +1,4 @@
-# Becca and Tom's iOS Tic Tac Toe ![Build Status](https://travis-ci.org/beccanelson/tttaas-iOS.svg?branch=master)
-
+# Becca and Tom's iOS Tic Tac Toe [![Build Status](https://travis-ci.org/beccanelson/tttaas-iOS.svg?branch=master)](https://travis-ci.org/beccanelson/tttaas-iOS)
 This is the iOS front-end of a tic-tac-toe application built in Clojure.
 
 ## Dependencies:
