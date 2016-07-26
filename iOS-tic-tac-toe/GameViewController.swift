@@ -143,8 +143,11 @@ public class GameViewController: UIViewController {
     
     public func getGameStatus(responseData: NSData?) -> String {
         var stringData = ""
-        if let validData = responseData {
-            stringData = (NSString(data:validData, encoding: NSUTF8StringEncoding)?.capitalizedString)!
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(responseData!, options: .AllowFragments)
+            stringData = (json["status"] as? String)!
+        } catch {
+            print("error serializing json: \(error)")
         }
         return stringData
     }
