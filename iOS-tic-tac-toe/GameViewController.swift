@@ -143,11 +143,13 @@ public class GameViewController: UIViewController {
     
     public func getGameStatus(responseData: NSData?) -> String {
         var stringData = ""
-        do {
-            let json = try NSJSONSerialization.JSONObjectWithData(responseData!, options: .AllowFragments)
-            stringData = (json["status"] as? String)!
-        } catch {
-            print("error serializing json: \(error)")
+        if let response = responseData {
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(response, options: .AllowFragments)
+                stringData = (json["status"] as? String)!
+            } catch {
+                print("error serializing json: \(error)")
+            }
         }
         return stringData
     }
