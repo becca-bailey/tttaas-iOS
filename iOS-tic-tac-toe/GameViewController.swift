@@ -1,11 +1,11 @@
 import UIKit
 
 public class GameViewController: UIViewController {
-    var xTurn = true
+    public var xTurn = true
     var hasWinner: Bool?
     var gameOver:Bool = false
     let emptyBoard: [String] = ["", "", "", "", "", "", "", "", ""]
-    var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
+    public var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
     let serverURL = "http://localhost:5000/game"
 
     @IBOutlet public weak var boardStackView: UIStackView!
@@ -93,7 +93,7 @@ public class GameViewController: UIViewController {
         spot.enabled = false
     }
     
-    func getUpdatedBoardArray(index: Int) -> [String] {
+    public func getUpdatedBoardArray(index: Int) -> [String] {
         boardArray[index] = getCurrentPlayerMarkerText(xTurn)
         return boardArray
     }

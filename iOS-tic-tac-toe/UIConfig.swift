@@ -1,6 +1,3 @@
-
-import Foundation
-
 public class UIConfig {
     public static let tieMessage = "It's a Tie!!"
     public static let player1 = "X"

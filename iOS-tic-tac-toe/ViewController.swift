@@ -1,22 +1,15 @@
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var gameTypeImage: UIImageView!
+    @IBOutlet weak var gameTypeLink: UIButton!
     
-    @IBAction func newPlayerVsPlayerGame(sender: UIButton) {
+    @IBAction public func newPlayerVsPlayerGame(sender: UIButton) {
         GameConfig.gameType = GameConfig.humanVsHuman
     }
     
-    @IBAction func newPlayerVsComputerGame(sender: UIButton) {
+    @IBAction public func newPlayerVsComputerGame(sender: UIButton) {
         if (sender.tag == 0) {
             GameConfig.gameType = GameConfig.humanVsComputer
         } else {
@@ -24,9 +17,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var gameTypeImage: UIImageView!
-    @IBOutlet weak var gameTypeLink: UIButton!
-
     @IBAction func switchGameType(sender: UIButton) {
         toggleGameTypeImage()
         toggleGameTypeLink()

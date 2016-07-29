@@ -13,7 +13,6 @@
 		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
 		8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */; };
 		883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* NetworkManager.swift */; };
-		883089E61D40265600D79AA7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E51D40265600D79AA7 /* NetworkManagerTests.swift */; };
 		883621441D369F73007F43D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621431D369F73007F43D0 /* AppDelegate.swift */; };
 		883621461D369F73007F43D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621451D369F73007F43D0 /* ViewController.swift */; };
 		883621491D369F73007F43D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883621471D369F73007F43D0 /* Main.storyboard */; };
@@ -45,7 +44,6 @@
 		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		883089E31D40137100D79AA7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		883089E51D40265600D79AA7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		883621401D369F73007F43D0 /* iOS-tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621431D369F73007F43D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		883621451D369F73007F43D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			children = (
 				883621581D369F73007F43D0 /* GameViewControllerTests.swift */,
 				8836215A1D369F73007F43D0 /* Info.plist */,
-				883089E51D40265600D79AA7 /* NetworkManagerTests.swift */,
 				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
 				8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */,
 			);
@@ -314,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883089E61D40265600D79AA7 /* NetworkManagerTests.swift in Sources */,
 				883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */,
 				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,
 				88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */,

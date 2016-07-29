@@ -1,7 +1,7 @@
 import Foundation
 
 public class Status {
-    static let win = "win"
-    static let tie = "tie"
-    static let inProgress = "in progress"
+    public static let win = "win"
+    public static let tie = "tie"
+    public static let inProgress = "in progress"
 }
