@@ -1,11 +1,13 @@
 import UIKit
 
 public class GameViewController: UIViewController {
+
     public var xTurn = true
+    public var boardArray = ["", "", "", "", "", "", "", "", ""]
+
     var hasWinner: Bool?
-    var gameOver:Bool = false
-    let emptyBoard: [String] = ["", "", "", "", "", "", "", "", ""]
-    public var boardArray: [String] = ["", "", "", "", "", "", "", "", ""]
+    var isGameOver = false
+    let emptyBoard = ["", "", "", "", "", "", "", "", ""]
     let serverURL = "http://localhost:5000/game"
 
     @IBOutlet public weak var boardStackView: UIStackView!
@@ -16,11 +18,7 @@ public class GameViewController: UIViewController {
         setPlayerLabel(playerTurnLabel, xTurn: true)
     }
 
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction public func markerButtonClicked(sender: UIButton) {
+    @IBAction public func makeMove(sender: UIButton) {
         let playerMarker = getCurrentPlayerMarker(xTurn)
         let resizedImage = scaleImage(playerMarker, button: sender)
         setSpotToMarker(resizedImage, button: sender)
@@ -28,7 +26,7 @@ public class GameViewController: UIViewController {
         
         let currentBoard = getUpdatedBoardArray(sender.tag)
         let status = getGameStatus(makeRequest(currentBoard))
-        self.gameOver = gameIsOver(status)
+        self.isGameOver = gameIsOver(status)
         
         completeTurn(status)
     }
@@ -112,7 +110,7 @@ public class GameViewController: UIViewController {
     }
     
     private func completeTurn(status:String) {
-        if (self.gameOver){
+        if (isGameOver){
             endGame(boardStackView, gameLabel: playerTurnLabel, status: status)
         } else {
             nextTurn(boardStackView, gameLabel: playerTurnLabel)
@@ -130,12 +128,10 @@ public class GameViewController: UIViewController {
         spotsEnabled(boardView, enabled: false)
     }
     
-    
     public func nextTurn(boardView: UIStackView, gameLabel: UILabel) {
         xTurn = !xTurn
         setPlayerLabel(gameLabel, xTurn: xTurn)
     }
-    
     
     public func makeRequest(currentBoard: [String]) -> NSData? {
         return NetworkManager.makePOSTRequest(serverURL, body: createJSONRequestBody(currentBoard))
