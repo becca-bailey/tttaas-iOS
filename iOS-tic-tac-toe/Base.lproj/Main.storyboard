@@ -186,7 +186,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetGame" destination="Tbk-D1-N2I" eventType="touchUpInside" id="2mL-8H-pv4"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="jz3-Rg-pg8"/>
                                         </connections>
                                     </button>

@@ -51,27 +51,6 @@ class GameViewControllerSpec: QuickSpec {
                 button.enabled = true
             }
             
-            it ("can clear a board view") {
-                let boardView = self.getFullBoardView()
-                
-                gameController.clearBoard(boardView)
-                
-                for view in boardView.subviews{
-                    for button in view.subviews {
-                        let btn = button as! UIButton
-                        expect(btn.currentBackgroundImage).to(beNil())
-                    }
-                }
-            }
-            
-            it ("can reset the board array") {
-                gameController.boardArray = ["","","X","O","X","","","",""]
-
-                gameController.clearBoardArray()
-                
-                expect(gameController.boardArray).to(equal(["","","","","","","","",""]))
-            }
-            
             it ("can set a label to include the current player's name") {
                 let playerLabel = UILabel()
                 playerLabel.text = ""

@@ -35,27 +35,6 @@ public class GameViewController: UIViewController {
         label.text = UIConfig.getPlayerLabel(xTurn, gameType: GameConfig.gameType)
     }
     
-    @IBAction func resetGame() {
-        xTurn = true
-        clearBoardArray()
-        setPlayerLabel(playerTurnLabel,xTurn: xTurn)
-        clearBoard(boardStackView)
-    }
-    
-    public func clearBoardArray() {
-        boardArray = emptyBoard
-    }
-    
-    public func clearBoard(boardStackView: UIStackView) {
-        for view in boardStackView.subviews{
-            for button in view.subviews {
-                let btn = button as! UIButton
-                btn.setBackgroundImage(nil, forState: .Normal)
-                btn.enabled = true
-            }
-        }
-    }
-    
     public func scaleImage(image: UIImage, button:UIButton) -> UIImage {
         let newSize = CGSizeMake(button.frame.width, button.frame.height)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
