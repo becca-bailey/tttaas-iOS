@@ -21,6 +21,17 @@
 		883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621581D369F73007F43D0 /* GameViewControllerTests.swift */; };
 		883621641D369FB8007F43D0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 883621631D369FB8007F43D0 /* Podfile */; };
 		883621661D36A13F007F43D0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621651D36A13F007F43D0 /* GameViewController.swift */; };
+		88E1747F1D4F971C001B28DA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1747E1D4F971C001B28DA /* Game.swift */; };
+		88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */; };
+		88E174831D4F9A5F001B28DA /* PlayerVsComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */; };
+		88E174861D4FD9C0001B28DA /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174851D4FD9C0001B28DA /* BoardView.swift */; };
+		88E174881D4FDA1F001B28DA /* BoardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174871D4FDA1F001B28DA /* BoardStackView.swift */; };
+		88E1748A1D4FDDA5001B28DA /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174891D4FDDA5001B28DA /* StatusView.swift */; };
+		88E1748C1D4FDECC001B28DA /* StatusLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */; };
+		88E1748E1D4FE4B2001B28DA /* MockBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1748D1D4FE4B2001B28DA /* MockBoardView.swift */; };
+		88E174901D4FEA03001B28DA /* MockStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1748F1D4FEA03001B28DA /* MockStatusView.swift */; };
+		88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */; };
+		88E174951D4FF30D001B28DA /* StatusLabelViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */; };
 		CA454227A547F65C8BF7A4B4 /* Pods_iOS_tic_tac_toeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +67,17 @@
 		8836215A1D369F73007F43D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		883621631D369FB8007F43D0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		883621651D36A13F007F43D0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		88E1747E1D4F971C001B28DA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsPlayer.swift; sourceTree = "<group>"; };
+		88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsComputer.swift; sourceTree = "<group>"; };
+		88E174851D4FD9C0001B28DA /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		88E174871D4FDA1F001B28DA /* BoardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardStackView.swift; sourceTree = "<group>"; };
+		88E174891D4FDDA5001B28DA /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabelView.swift; sourceTree = "<group>"; };
+		88E1748D1D4FE4B2001B28DA /* MockBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBoardView.swift; sourceTree = "<group>"; };
+		88E1748F1D4FEA03001B28DA /* MockStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStatusView.swift; sourceTree = "<group>"; };
+		88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardStackViewTests.swift; sourceTree = "<group>"; };
+		88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabelViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +134,11 @@
 				88054C081D4278150064CE60 /* Status.swift */,
 				88054C0A1D4279850064CE60 /* UIConfig.swift */,
 				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
+				88E174851D4FD9C0001B28DA /* BoardView.swift */,
+				88E174871D4FDA1F001B28DA /* BoardStackView.swift */,
+				88E174891D4FDDA5001B28DA /* StatusView.swift */,
+				88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */,
+				88E174841D4FD90E001B28DA /* Game */,
 			);
 			path = "iOS-tic-tac-toe";
 			sourceTree = "<group>";
@@ -123,8 +150,30 @@
 				8836215A1D369F73007F43D0 /* Info.plist */,
 				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
 				8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */,
+				88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */,
+				88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */,
+				88E174931D4FEE2E001B28DA /* Mocks */,
 			);
 			path = "iOS-tic-tac-toeTests";
+			sourceTree = "<group>";
+		};
+		88E174841D4FD90E001B28DA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				88E1747E1D4F971C001B28DA /* Game.swift */,
+				88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */,
+				88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		88E174931D4FEE2E001B28DA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				88E1748D1D4FE4B2001B28DA /* MockBoardView.swift */,
+				88E1748F1D4FEA03001B28DA /* MockStatusView.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		E3BBC9C21684FA412EC1CD07 /* Frameworks */ = {
@@ -297,13 +346,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E174861D4FD9C0001B28DA /* BoardView.swift in Sources */,
+				88E1748A1D4FDDA5001B28DA /* StatusView.swift in Sources */,
 				883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */,
 				88054C091D4278150064CE60 /* Status.swift in Sources */,
 				8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */,
+				88E1748C1D4FDECC001B28DA /* StatusLabelView.swift in Sources */,
 				883621461D369F73007F43D0 /* ViewController.swift in Sources */,
+				88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */,
 				88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */,
+				88E174831D4F9A5F001B28DA /* PlayerVsComputer.swift in Sources */,
+				88E174881D4FDA1F001B28DA /* BoardStackView.swift in Sources */,
 				883621661D36A13F007F43D0 /* GameViewController.swift in Sources */,
 				883621441D369F73007F43D0 /* AppDelegate.swift in Sources */,
+				88E1747F1D4F971C001B28DA /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +369,11 @@
 			files = (
 				883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */,
 				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,
+				88E174951D4FF30D001B28DA /* StatusLabelViewTests.swift in Sources */,
+				88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */,
 				88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */,
+				88E1748E1D4FE4B2001B28DA /* MockBoardView.swift in Sources */,
+				88E174901D4FEA03001B28DA /* MockStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

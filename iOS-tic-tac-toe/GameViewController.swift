@@ -10,38 +10,25 @@ public class GameViewController: UIViewController {
     let emptyBoard = ["", "", "", "", "", "", "", "", ""]
     let serverURL = "http://localhost:5000/game"
 
-    @IBOutlet public weak var boardStackView: UIStackView!
-    @IBOutlet public weak var playerTurnLabel: UILabel!
+    @IBOutlet public weak var statusView: StatusView!
+    @IBOutlet public weak var boardView: BoardView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        setPlayerLabel(playerTurnLabel, xTurn: true)
+        statusView.displayTurn(message: UIConfig.getPlayerLabel(true, gameType: GameConfig.game.getGameType()))
     }
 
     @IBAction public func makeMove(sender: UIButton) {
-        let playerMarker = getCurrentPlayerMarker(xTurn)
-        let resizedImage = scaleImage(playerMarker, button: sender)
-        setSpotToMarker(resizedImage, button: sender)
-        disableBoardSpot(sender)
-        
+
         let currentBoard = getUpdatedBoardArray(sender.tag)
-        let status = getGameStatus(makeRequest(currentBoard))
+        let responseData = makeRequest(currentBoard)
+        let status = getGameStatus(responseData)
+        let board = getBoard(responseData)
+        boardView.show(board: board)
+        boardArray = board
         self.isGameOver = gameIsOver(status)
         
         completeTurn(status)
-    }
-    
-    public func setPlayerLabel(label: UILabel, xTurn: Bool) {
-        label.text = UIConfig.getPlayerLabel(xTurn, gameType: GameConfig.gameType)
-    }
-    
-    public func scaleImage(image: UIImage, button:UIButton) -> UIImage {
-        let newSize = CGSizeMake(button.frame.width, button.frame.height)
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
-        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
-        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
     }
     
     public func setSpotToMarker(playerMarker: UIImage, button: UIButton) {
@@ -66,10 +53,6 @@ public class GameViewController: UIViewController {
         }
     }
     
-    public func disableBoardSpot(spot: UIButton) {
-        spot.enabled = false
-    }
-    
     public func getUpdatedBoardArray(index: Int) -> [String] {
         boardArray[index] = getCurrentPlayerMarkerText(xTurn)
         return boardArray
@@ -79,37 +62,28 @@ public class GameViewController: UIViewController {
         return "{\"board\": \(currentBoard.description), \"gameType\": \(GameConfig.gameType)}"
     }
     
-    public func spotsEnabled(boardStackView: UIStackView, enabled: Bool) {
-        for view in boardStackView.subviews{
-            for button in view.subviews {
-                let btn = button as! UIButton
-                btn.enabled = enabled
-            }
-        }
-    }
-    
     private func completeTurn(status:String) {
         if (isGameOver){
-            endGame(boardStackView, gameLabel: playerTurnLabel, status: status)
+            endGame(status)
         } else {
-            nextTurn(boardStackView, gameLabel: playerTurnLabel)
+            nextTurn()
         }
     }
     
-    public func endGame(boardView: UIStackView, gameLabel: UILabel, status: String) {
+    public func endGame(status: String) {
         if (status == Status.win && xTurn) {
-            gameLabel.text = UIConfig.winnerMessage(UIConfig.player1)
+            statusView.displayWinner(player: UIConfig.player1)
         } else if (status == Status.win && !xTurn){
-            gameLabel.text = UIConfig.winnerMessage(UIConfig.player2)
+            statusView.displayWinner(player: UIConfig.player2)
         } else if (status == Status.tie) {
-            gameLabel.text = UIConfig.tieMessage
+            statusView.displayTie()
         }
-        spotsEnabled(boardView, enabled: false)
+        boardView.spotsEnabled(false)
     }
     
-    public func nextTurn(boardView: UIStackView, gameLabel: UILabel) {
-        xTurn = !xTurn
-        setPlayerLabel(gameLabel, xTurn: xTurn)
+    public func nextTurn() {
+        xTurn = GameConfig.game.changeCurrentPlayer(xTurn)
+        statusView.displayTurn(message: UIConfig.getPlayerLabel(xTurn, gameType: GameConfig.game.getGameType()))
     }
     
     public func makeRequest(currentBoard: [String]) -> NSData? {
@@ -127,6 +101,21 @@ public class GameViewController: UIViewController {
             }
         }
         return stringData
+    }
+    
+    
+    public func getBoard(responseData: NSData?) -> [String] {
+        var board = [String]()
+        if let response = responseData {
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(response, options: .AllowFragments)
+                board = (json["board"] as? [String])!
+            } catch {
+                print("error serializing json: \(error)")
+            }
+        }
+        print(board.description)
+        return board
     }
     
     public func gameIsOver(status: String) -> Bool {

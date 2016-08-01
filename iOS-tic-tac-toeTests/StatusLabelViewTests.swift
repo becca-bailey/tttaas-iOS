@@ -1,0 +1,32 @@
+import iOS_tic_tac_toe
+import Foundation
+import Quick
+import Nimble
+
+class StatusLabelViewSpec: QuickSpec {
+    override func spec() {
+        describe("StatusLabelView") {
+            it ("can set a label to include the current player's name") {
+                let playerLabel = StatusLabelView()
+                playerLabel.text = ""
+                playerLabel.displayTurn(message: UIConfig.getPlayerLabel(true, gameType: GameConfig.humanVsHuman))
+                expect(playerLabel.text).to(contain("Player 1"))
+            }
+            
+            it ("can set the status label when there's a tie") {
+                let playerLabel = StatusLabelView()
+                playerLabel.text = ""
+                playerLabel.displayTie()
+                expect(playerLabel.text).to(equal(UIConfig.tieMessage))
+            }
+            
+            it ("can set the status label when there's a winner") {
+                let playerLabel = StatusLabelView()
+                playerLabel.text = ""
+                playerLabel.displayWinner(player: UIConfig.player1)
+                expect(playerLabel.text).to(equal(UIConfig.winnerMessage(UIConfig.player1)))
+            }
+        }
+    }
+}
+

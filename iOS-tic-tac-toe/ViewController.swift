@@ -7,13 +7,16 @@ public class ViewController: UIViewController {
     
     @IBAction public func newPlayerVsPlayerGame(sender: UIButton) {
         GameConfig.gameType = GameConfig.humanVsHuman
+        GameConfig.game = PlayerVsPlayer()
     }
     
     @IBAction public func newPlayerVsComputerGame(sender: UIButton) {
         if (sender.tag == 0) {
             GameConfig.gameType = GameConfig.humanVsComputer
+            GameConfig.game = PlayerVsComputer()
         } else {
             GameConfig.gameType = GameConfig.computerVsHuman
+            GameConfig.game = PlayerVsComputer()
         }
     }
     
