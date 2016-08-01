@@ -4,4 +4,5 @@ public class GameConfig {
     public static let computerVsHuman = "computerVsHuman"
     
     public static var gameType: String = ""
+    public static var game: Game = PlayerVsPlayer()
 }
