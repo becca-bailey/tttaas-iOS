@@ -12,7 +12,7 @@
 		88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */; };
 		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
 		8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */; };
-		883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* NetworkManager.swift */; };
+		883089E41D40137100D79AA7 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* HTTPClient.swift */; };
 		883621441D369F73007F43D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621431D369F73007F43D0 /* AppDelegate.swift */; };
 		883621461D369F73007F43D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621451D369F73007F43D0 /* ViewController.swift */; };
 		883621491D369F73007F43D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883621471D369F73007F43D0 /* Main.storyboard */; };
@@ -32,6 +32,14 @@
 		88E174901D4FEA03001B28DA /* MockStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1748F1D4FEA03001B28DA /* MockStatusView.swift */; };
 		88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */; };
 		88E174951D4FF30D001B28DA /* StatusLabelViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */; };
+		88E174981D50E7AB001B28DA /* DefaultGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174971D50E7AB001B28DA /* DefaultGameInteractor.swift */; };
+		88E1749A1D50F6D6001B28DA /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174991D50F6D6001B28DA /* GameInteractor.swift */; };
+		88E1749C1D50FD60001B28DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749B1D50FD60001B28DA /* Board.swift */; };
+		88E1749E1D510049001B28DA /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749D1D510049001B28DA /* RequestHandler.swift */; };
+		88E174A01D5101DF001B28DA /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749F1D5101DF001B28DA /* ResponseHandler.swift */; };
+		88E174A31D51220B001B28DA /* GameInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174A21D51220B001B28DA /* GameInteractorTests.swift */; };
+		88E174A51D512215001B28DA /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174A41D512215001B28DA /* GameTests.swift */; };
+		88E174A71D512AD7001B28DA /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174A61D512AD7001B28DA /* MockInteractor.swift */; };
 		CA454227A547F65C8BF7A4B4 /* Pods_iOS_tic_tac_toeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +62,7 @@
 		88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfigTests.swift; sourceTree = "<group>"; };
 		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
-		883089E31D40137100D79AA7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		883089E31D40137100D79AA7 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		883621401D369F73007F43D0 /* iOS-tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621431D369F73007F43D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		883621451D369F73007F43D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 		88E1748F1D4FEA03001B28DA /* MockStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStatusView.swift; sourceTree = "<group>"; };
 		88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardStackViewTests.swift; sourceTree = "<group>"; };
 		88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabelViewTests.swift; sourceTree = "<group>"; };
+		88E174971D50E7AB001B28DA /* DefaultGameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGameInteractor.swift; sourceTree = "<group>"; };
+		88E174991D50F6D6001B28DA /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		88E1749B1D50FD60001B28DA /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		88E1749D1D510049001B28DA /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		88E1749F1D5101DF001B28DA /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		88E174A21D51220B001B28DA /* GameInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractorTests.swift; sourceTree = "<group>"; };
+		88E174A41D512215001B28DA /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		88E174A61D512AD7001B28DA /* MockInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,15 +146,15 @@
 				8836214A1D369F73007F43D0 /* Assets.xcassets */,
 				8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */,
 				8836214F1D369F73007F43D0 /* Info.plist */,
-				883089E31D40137100D79AA7 /* NetworkManager.swift */,
 				88054C081D4278150064CE60 /* Status.swift */,
 				88054C0A1D4279850064CE60 /* UIConfig.swift */,
 				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
-				88E174851D4FD9C0001B28DA /* BoardView.swift */,
-				88E174871D4FDA1F001B28DA /* BoardStackView.swift */,
-				88E174891D4FDDA5001B28DA /* StatusView.swift */,
-				88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */,
+				88E174991D50F6D6001B28DA /* GameInteractor.swift */,
+				88E174971D50E7AB001B28DA /* DefaultGameInteractor.swift */,
+				88E1749B1D50FD60001B28DA /* Board.swift */,
+				88E174961D50E648001B28DA /* Views */,
 				88E174841D4FD90E001B28DA /* Game */,
+				88E174A11D5101E7001B28DA /* HTTP */,
 			);
 			path = "iOS-tic-tac-toe";
 			sourceTree = "<group>";
@@ -152,6 +168,8 @@
 				8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */,
 				88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */,
 				88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */,
+				88E174A21D51220B001B28DA /* GameInteractorTests.swift */,
+				88E174A41D512215001B28DA /* GameTests.swift */,
 				88E174931D4FEE2E001B28DA /* Mocks */,
 			);
 			path = "iOS-tic-tac-toeTests";
@@ -172,8 +190,30 @@
 			children = (
 				88E1748D1D4FE4B2001B28DA /* MockBoardView.swift */,
 				88E1748F1D4FEA03001B28DA /* MockStatusView.swift */,
+				88E174A61D512AD7001B28DA /* MockInteractor.swift */,
 			);
 			name = Mocks;
+			sourceTree = "<group>";
+		};
+		88E174961D50E648001B28DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88E174851D4FD9C0001B28DA /* BoardView.swift */,
+				88E174871D4FDA1F001B28DA /* BoardStackView.swift */,
+				88E174891D4FDDA5001B28DA /* StatusView.swift */,
+				88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		88E174A11D5101E7001B28DA /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				88E1749D1D510049001B28DA /* RequestHandler.swift */,
+				88E1749F1D5101DF001B28DA /* ResponseHandler.swift */,
+				883089E31D40137100D79AA7 /* HTTPClient.swift */,
+			);
+			name = HTTP;
 			sourceTree = "<group>";
 		};
 		E3BBC9C21684FA412EC1CD07 /* Frameworks */ = {
@@ -347,11 +387,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E174861D4FD9C0001B28DA /* BoardView.swift in Sources */,
+				88E174A01D5101DF001B28DA /* ResponseHandler.swift in Sources */,
 				88E1748A1D4FDDA5001B28DA /* StatusView.swift in Sources */,
-				883089E41D40137100D79AA7 /* NetworkManager.swift in Sources */,
+				883089E41D40137100D79AA7 /* HTTPClient.swift in Sources */,
 				88054C091D4278150064CE60 /* Status.swift in Sources */,
+				88E1749E1D510049001B28DA /* RequestHandler.swift in Sources */,
+				88E1749C1D50FD60001B28DA /* Board.swift in Sources */,
+				88E1749A1D50F6D6001B28DA /* GameInteractor.swift in Sources */,
 				8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */,
 				88E1748C1D4FDECC001B28DA /* StatusLabelView.swift in Sources */,
+				88E174981D50E7AB001B28DA /* DefaultGameInteractor.swift in Sources */,
 				883621461D369F73007F43D0 /* ViewController.swift in Sources */,
 				88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */,
 				88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */,
@@ -367,10 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E174A71D512AD7001B28DA /* MockInteractor.swift in Sources */,
 				883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */,
+				88E174A51D512215001B28DA /* GameTests.swift in Sources */,
 				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,
 				88E174951D4FF30D001B28DA /* StatusLabelViewTests.swift in Sources */,
 				88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */,
+				88E174A31D51220B001B28DA /* GameInteractorTests.swift in Sources */,
 				88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */,
 				88E1748E1D4FE4B2001B28DA /* MockBoardView.swift in Sources */,
 				88E174901D4FEA03001B28DA /* MockStatusView.swift in Sources */,

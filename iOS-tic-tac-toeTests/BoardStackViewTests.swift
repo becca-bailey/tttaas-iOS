@@ -6,6 +6,7 @@ import Nimble
 class BoardStackViewTests: QuickSpec {
     override func spec() {
         var boardView: BoardStackView!
+        
         beforeEach() {
             boardView = BoardStackView()
         }
@@ -34,6 +35,11 @@ class BoardStackViewTests: QuickSpec {
                 expect(oMarker.size.width).toNot(equal(100))
                 expect(resizedImage.size.height).to(equal(100))
                 expect(resizedImage.size.width).to(equal(100))
+            }
+            
+            it("can get an image for a marker") {
+                let xMarker = UIImage(named: "letter-x")!
+                expect(boardView.getImageForMarker("X")).to(equal(xMarker))
             }
         }
     }

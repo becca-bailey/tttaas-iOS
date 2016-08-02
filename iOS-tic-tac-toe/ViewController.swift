@@ -17,6 +17,7 @@ public class ViewController: UIViewController {
         } else {
             GameConfig.gameType = GameConfig.computerVsHuman
             GameConfig.game = PlayerVsComputer()
+            GameConfig.game.isXTurn = false
         }
     }
     

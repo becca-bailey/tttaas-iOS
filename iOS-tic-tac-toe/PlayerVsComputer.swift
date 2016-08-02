@@ -1,5 +1,10 @@
 import Foundation
 public class PlayerVsComputer : Game {
+    
+    public var isXTurn: Bool = true
+    public var board = Board()
+    public var status = ""
+    
     required public init() {
         
     }
@@ -8,7 +13,6 @@ public class PlayerVsComputer : Game {
         return GameConfig.humanVsComputer
     }
     
-    public func changeCurrentPlayer(isXTurn: Bool) -> Bool {
-        return isXTurn
+    public func changeCurrentPlayer() {
     }
 }

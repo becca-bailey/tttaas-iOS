@@ -1,9 +1,9 @@
 import Foundation
 
-class NetworkManager {
-    static var completedRequest: Bool = false
+class HTTPClient {
+    var completedRequest: Bool = false
     
-    static func makePOSTRequest(url:String, body:String) -> NSData?{
+    func makePOSTRequest(url:String, body:String) -> NSData?{
         var responseData: NSData? = NSData()
         var errorCounter = 5
         var errorResponse = true
