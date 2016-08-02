@@ -32,6 +32,6 @@ extension Game {
     }
     
     public func isOver() -> Bool {
-        return (status == Status.win) || (status == Status.tie)
+        return status != Status.inProgress;
     }
 }

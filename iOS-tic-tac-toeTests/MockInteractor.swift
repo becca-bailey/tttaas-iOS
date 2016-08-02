@@ -6,7 +6,7 @@ public class MockInteractor: NSObject, GameInteractor {
     public var moveMade: Int!
     public var turnCompleted: Bool! = false
     
-    public required init(boardView: BoardView, statusView: StatusView) {
+    public required init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView) {
         
     }
     
@@ -14,7 +14,7 @@ public class MockInteractor: NSObject, GameInteractor {
         
     }
     
-    public func makeMove(spotIndex: Int) {
+    public func makeMove(spotIndex: Int?) {
         moveMade = spotIndex
     }
     

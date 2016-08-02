@@ -6,13 +6,14 @@ public class GameViewController: UIViewController {
     
     @IBOutlet public weak var statusView: StatusView!
     @IBOutlet public weak var boardView: BoardView!
-
+    @IBOutlet weak var indicatorView: IndicatorView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         interactor = DefaultGameInteractor(
             boardView: boardView,
-            statusView: statusView)
+            statusView: statusView,
+            indicatorView: indicatorView)
         
         interactor.startGame(GameConfig.game)
         

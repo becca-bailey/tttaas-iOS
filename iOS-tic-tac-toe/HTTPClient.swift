@@ -3,8 +3,7 @@ import Foundation
 class HTTPClient {
     var completedRequest: Bool = false
     
-    func makePOSTRequest(url:String, body:String) -> NSData?{
-        var responseData: NSData? = NSData()
+    func makePOSTRequest(url:String, body:String, onCompletion: (NSData?) -> ()){
         var errorCounter = 5
         var errorResponse = true
         while (errorResponse && errorCounter > 0) {
@@ -14,7 +13,9 @@ class HTTPClient {
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
                 errorResponse = (error != nil)
-                responseData = data
+                if (!errorResponse) {
+                    onCompletion(data)
+                }
                 self.completedRequest = true
             })
             task.resume()
@@ -24,6 +25,5 @@ class HTTPClient {
             self.completedRequest = false
             errorCounter -= 1
         }
-        return responseData
     }
 }

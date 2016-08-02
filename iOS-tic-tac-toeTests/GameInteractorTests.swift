@@ -7,11 +7,13 @@ class GameInteractorTests: QuickSpec {
         var gameInteractor: DefaultGameInteractor!
         var mockBoardView: MockBoardView!
         var mockStatusView: MockStatusView!
+        var mockIndicatorView: MockIndicatorView!
         
         beforeEach() {
             mockBoardView = MockBoardView()
             mockStatusView = MockStatusView()
-            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView)
+            mockIndicatorView = MockIndicatorView()
+            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView)
             gameInteractor.game = PlayerVsPlayer()
         }
         
@@ -26,7 +28,7 @@ class GameInteractorTests: QuickSpec {
             
             it("changes the label at the end of the game if X wins") {
                 gameInteractor.game.isXTurn = true
-                gameInteractor.game.status = Status.win
+                gameInteractor.game.status = Status.player1Wins
                 gameInteractor.endGame()
                 
                 expect(mockStatusView.statusMessage).to(equal("X wins!"))
@@ -34,7 +36,7 @@ class GameInteractorTests: QuickSpec {
             
             it("changes the label at the end of the game if the game is over and X Wins") {
                 gameInteractor.game.isXTurn = true
-                gameInteractor.game.status = Status.win
+                gameInteractor.game.status = Status.player1Wins
                 gameInteractor.completeTurn()
                 
                 expect(mockStatusView.statusMessage).to(equal("X wins!"))
@@ -50,14 +52,14 @@ class GameInteractorTests: QuickSpec {
             
             it("changes the label at the end of the game if O wins") {
                 gameInteractor.game.isXTurn = false
-                gameInteractor.game.status = Status.win
+                gameInteractor.game.status = Status.player2Wins
                 gameInteractor.endGame()
                 
                 expect(mockStatusView.statusMessage).to(equal("O wins!"))
             }
             
             it("disables the buttons at the end of the game") {
-                gameInteractor.game.status = Status.win
+                gameInteractor.game.status = Status.player2Wins
                 gameInteractor.endGame()
                 
                 expect(mockBoardView.spotsEnabled).to(beFalse())
@@ -68,6 +70,18 @@ class GameInteractorTests: QuickSpec {
                 
                 gameInteractor.nextTurn()
                 expect(mockStatusView.statusMessage).to(contain("Player 2"))
+            }
+            
+            it("indicates that a move is in progress") {
+                gameInteractor.makeMove(0)
+                
+                expect(mockIndicatorView.spinnerStarted).to(beTrue())
+            }
+            
+            it("stops the spinner when a turn is completed") {
+                gameInteractor.completeTurn()
+                
+                expect(mockIndicatorView.spinnerStopped).to(beTrue())
             }
             
             it("needs this at the bottom") {

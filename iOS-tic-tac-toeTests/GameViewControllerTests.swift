@@ -8,7 +8,7 @@ class GameViewControllerSpec: QuickSpec {
         var mockInteractor: MockInteractor!
         
         beforeEach() {
-            mockInteractor = MockInteractor(boardView: MockBoardView(), statusView: MockStatusView())
+            mockInteractor = MockInteractor(boardView: MockBoardView(), statusView: MockStatusView(), indicatorView: MockIndicatorView())
             gameController = GameViewController()
             gameController.interactor = mockInteractor
         }
