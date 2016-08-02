@@ -34,7 +34,7 @@ class GameTests: QuickSpec {
             }
 
             it ("can check if the game is over") {
-                game.status = Status.win
+                game.status = Status.player1Wins
                 expect(game.isOver()).to(beTrue())
                 
                 game.status = Status.tie
