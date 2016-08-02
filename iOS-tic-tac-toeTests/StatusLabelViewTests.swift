@@ -8,8 +8,9 @@ class StatusLabelViewSpec: QuickSpec {
         describe("StatusLabelView") {
             it ("can set a label to include the current player's name") {
                 let playerLabel = StatusLabelView()
+                let game = PlayerVsPlayer()
                 playerLabel.text = ""
-                playerLabel.displayTurn(message: UIConfig.getPlayerLabel(true, gameType: GameConfig.humanVsHuman))
+                playerLabel.displayTurn(message: game.getTurnMessage())
                 expect(playerLabel.text).to(contain("Player 1"))
             }
             
