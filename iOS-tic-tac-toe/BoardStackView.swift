@@ -7,12 +7,16 @@ public class BoardStackView: UIStackView, BoardView {
         for view in self.subviews{
             for button in view.subviews {
                 let btn = button as! UIButton
-                if let image = UIImage(named: "letter-\(board[btn.tag].lowercaseString)") {
+                if let image = getImageForMarker(board[btn.tag]) {
                     btn.enabled = false
                     btn.setBackgroundImage(scaleImage(image, button: btn), forState: .Normal)
                 }
             }
         }
+    }
+    
+    public func getImageForMarker(marker: String) -> UIImage?{
+        return UIImage(named: "letter-\(marker.lowercaseString)")
     }
     
     public func spotsEnabled(enabled: Bool) {

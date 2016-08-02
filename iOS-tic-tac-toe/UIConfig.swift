@@ -19,17 +19,6 @@ public class UIConfig {
         return marker + " Wins!!"
     }
     
-    public static func getPlayerLabel(xTurn: Bool, gameType: String) -> String {
-        if (gameType == GameConfig.humanVsComputer) {
-            return playerTurnMessage
-        }
-        else if (gameType == GameConfig.computerVsHuman) {
-            return computerTurnMessage
-        } else {
-            return getLabelForPlayerVsPlayerGame(xTurn)
-        }
-    }
-    
     public static func getLabelForPlayerVsPlayerGame(xTurn: Bool) -> String {
         var currentPlayerNumber = 1
         if (xTurn) {
