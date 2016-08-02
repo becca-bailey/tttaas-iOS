@@ -20,6 +20,7 @@ public class DefaultGameInteractor: GameInteractor {
     
     public func makeMove(spotIndex: Int) {
         game.updateBoard(spotIndex)
+        boardView.show(board: game.board.asArray())
         let responseHandler = ResponseHandler(responseData: requestHandler.getGameResponse(game))
         game = responseHandler.getUpdatedGame(game)
         boardView.show(board: game.board.asArray())
