@@ -207,6 +207,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="R80-Qn-yOG" secondAttribute="height" multiplier="1:1" id="UGR-FM-nW9"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                                 <connections>
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="n5Y-jd-bEe"/>
                                                                 </connections>

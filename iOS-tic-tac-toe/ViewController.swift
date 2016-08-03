@@ -5,6 +5,16 @@ public class ViewController: UIViewController {
     @IBOutlet weak var gameTypeImage: UIImageView!
     @IBOutlet weak var gameTypeLink: UIButton!
     
+    public override func viewDidLoad() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        UIConfig.player1 = String(defaults.stringForKey("SettingsPlayer1Marker")!.characters.first!)
+        UIConfig.player2 = String(defaults.stringForKey("SettingsPlayer2Marker")!.characters.first!)
+        print(defaults.stringForKey("SettingsPlayer1Marker"))
+        print(defaults.stringForKey("SettingsPlayer2Marker"))
+    
+        
+    }
+    
     @IBAction public func newPlayerVsPlayerGame(sender: UIButton) {
         GameConfig.gameType = GameConfig.humanVsHuman
         GameConfig.game = PlayerVsPlayer()

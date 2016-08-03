@@ -1,7 +1,7 @@
 public class UIConfig {
     public static let tieMessage = "It's a Tie!!"
-    public static let player1 = "X"
-    public static let player2 = "O"
+    public static var player1 = "X"
+    public static var player2 = "O"
     
     public static let player1Image = "letter-x"
     public static let player2Image = "letter-o"
