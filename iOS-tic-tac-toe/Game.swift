@@ -15,9 +15,9 @@ extension Game {
     
     public func getCurrentPlayerMarkerText() -> String {
         if (isXTurn) {
-            return UIConfig.player1
+            return "X"
         } else {
-            return UIConfig.player2
+            return "O"
         }
     }
     
