@@ -4,18 +4,21 @@ class HTTPClient {
     var completedRequest: Bool = false
     
     func makePOSTRequest(url:String, body:String, onCompletion: (NSData?) -> ()){
-        var errorCounter = 5
+        print(body)
         var errorResponse = true
-        while (errorResponse && errorCounter > 0) {
+        while (errorResponse) {
             let request = NSMutableURLRequest(URL: NSURL(string: url)!)
             request.HTTPMethod = "POST"
             request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                errorResponse = (error != nil)
+                errorResponse = ((error != nil) || (data?.length > 100))
+                print(errorResponse)
                 if (!errorResponse) {
+                    print(data)
                     onCompletion(data)
                 }
+                sleep(1)
                 self.completedRequest = true
             })
             task.resume()
@@ -23,7 +26,6 @@ class HTTPClient {
                 // Stop running until request completes
             }
             self.completedRequest = false
-            errorCounter -= 1
         }
     }
 }
