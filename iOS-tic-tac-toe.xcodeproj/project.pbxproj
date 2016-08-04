@@ -21,6 +21,7 @@
 		883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621581D369F73007F43D0 /* GameViewControllerTests.swift */; };
 		883621641D369FB8007F43D0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 883621631D369FB8007F43D0 /* Podfile */; };
 		883621661D36A13F007F43D0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621651D36A13F007F43D0 /* GameViewController.swift */; };
+		884367701D53E683003E5AA6 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8843676F1D53E683003E5AA6 /* BoardTests.swift */; };
 		8899C7F31D5232F40013AC76 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C7F21D5232F40013AC76 /* IndicatorView.swift */; };
 		8899C7F51D52334A0013AC76 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */; };
 		8899C7F71D5238730013AC76 /* MockIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C7F61D5238730013AC76 /* MockIndicatorView.swift */; };
@@ -79,6 +80,7 @@
 		8836215A1D369F73007F43D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		883621631D369FB8007F43D0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		883621651D36A13F007F43D0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8843676F1D53E683003E5AA6 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		8899C7F21D5232F40013AC76 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8899C7F61D5238730013AC76 /* MockIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockIndicatorView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		883621571D369F73007F43D0 /* iOS-tic-tac-toeTests */ = {
 			isa = PBXGroup;
 			children = (
+				8843676F1D53E683003E5AA6 /* BoardTests.swift */,
 				883621581D369F73007F43D0 /* GameViewControllerTests.swift */,
 				8836215A1D369F73007F43D0 /* Info.plist */,
 				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
@@ -429,6 +432,7 @@
 			files = (
 				88E174A71D512AD7001B28DA /* MockInteractor.swift in Sources */,
 				883621591D369F73007F43D0 /* GameViewControllerTests.swift in Sources */,
+				884367701D53E683003E5AA6 /* BoardTests.swift in Sources */,
 				88E174A51D512215001B28DA /* GameTests.swift in Sources */,
 				8899C7F71D5238730013AC76 /* MockIndicatorView.swift in Sources */,
 				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,

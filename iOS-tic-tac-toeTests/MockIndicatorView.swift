@@ -12,4 +12,6 @@ public class MockIndicatorView: NSObject, IndicatorView {
     public func moveDone() {
         spinnerStopped = true
     }
+    
+    
 }

@@ -24,6 +24,15 @@ public class BoardStackView: UIStackView, BoardView {
         }
     }
     
+    public func clearSpots() {
+        for view in self.subviews{
+           for button in view.subviews {
+                let btn = button as! UIButton
+                btn.setTitle("", forState: .Normal)
+            }
+        }
+    }
+    
     public func setSpotToMarker(button: UIButton, marker: String) {
         button.titleLabel?.font = UIFont(name: "PingFangTC-Regular", size: 50)
         button.titleLabel?.adjustsFontSizeToFitWidth = true

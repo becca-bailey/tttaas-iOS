@@ -87,6 +87,15 @@ class GameInteractorTests: QuickSpec {
             it("needs this at the bottom") {
                 expect(true).to(equal(true))
             }
+            
+            it("can reset the game") {
+                let game = PlayerVsPlayer()
+                gameInteractor.resetGame(game)
+                
+                expect(mockStatusView.statusMessage).to(equal(game.getTurnMessage()))
+                expect(game.board.asArray()).to(equal(["", "", "", "", "", "", "", "", ""]))
+
+            }
         }
     }
     
