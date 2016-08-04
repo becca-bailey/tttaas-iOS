@@ -72,11 +72,11 @@ class GameInteractorTests: QuickSpec {
                 expect(mockStatusView.statusMessage).to(contain("Player 2"))
             }
             
-            it("indicates that a move is in progress") {
-                gameInteractor.makeMove(0)
-                
-                expect(mockIndicatorView.spinnerStarted).to(beTrue())
-            }
+//            it("indicates that a move is in progress") {
+//                gameInteractor.makeMove(0)
+//                
+//                expect(mockIndicatorView.spinnerStarted).to(beTrue())
+//            }
             
             it("stops the spinner when a turn is completed") {
                 gameInteractor.completeTurn()
@@ -98,6 +98,5 @@ class GameInteractorTests: QuickSpec {
             }
         }
     }
-    
 }
 
