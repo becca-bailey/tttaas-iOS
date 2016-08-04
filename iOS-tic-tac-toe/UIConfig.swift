@@ -14,6 +14,8 @@ public class UIConfig {
     
     public static let playerTurnMessage = "Your turn!"
     public static let computerTurnMessage = "Computer's turn!"
+    
+    public static let defaultfont = "PingFangTC-Regular"
         
     public static func winnerMessage(marker: String) -> String {
         return marker + " Wins!!"
