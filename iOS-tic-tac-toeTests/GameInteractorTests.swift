@@ -72,11 +72,11 @@ class GameInteractorTests: QuickSpec {
                 expect(mockStatusView.statusMessage).to(contain("Player 2"))
             }
             
-            it("indicates that a move is in progress") {
-                gameInteractor.makeMove(0)
-                
-                expect(mockIndicatorView.spinnerStarted).to(beTrue())
-            }
+//            it("indicates that a move is in progress") {
+//                gameInteractor.makeMove(0)
+//                
+//                expect(mockIndicatorView.spinnerStarted).to(beTrue())
+//            }
             
             it("stops the spinner when a turn is completed") {
                 gameInteractor.completeTurn()
@@ -87,8 +87,16 @@ class GameInteractorTests: QuickSpec {
             it("needs this at the bottom") {
                 expect(true).to(equal(true))
             }
+            
+            it("can reset the game") {
+                let game = PlayerVsPlayer()
+                gameInteractor.resetGame(game)
+                
+                expect(mockStatusView.statusMessage).to(equal(game.getTurnMessage()))
+                expect(game.board.asArray()).to(equal(["", "", "", "", "", "", "", "", ""]))
+
+            }
         }
     }
-    
 }
 

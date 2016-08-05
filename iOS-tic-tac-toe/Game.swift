@@ -6,6 +6,7 @@ public protocol Game: class{
     var status: String {get set}
     func changeCurrentPlayer()
     func getGameType() -> String
+    func resetGame()
 }
 
 extension Game {
@@ -34,4 +35,10 @@ extension Game {
     public func isOver() -> Bool {
         return status != Status.inProgress;
     }
+    
+    public func resetGame() {
+        isXTurn = true
+        board.clear()
+    }
+    
 }

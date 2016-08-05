@@ -7,14 +7,16 @@ public class ViewController: UIViewController {
     
     public override func viewDidLoad() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        if let player1Marker = defaults.stringForKey("SettingsPlayer1Marker"){
-            UIConfig.player1 = String(player1Marker.characters.first!)
+        let player1Marker = defaults.stringForKey("SettingsPlayer1Marker")
+        if player1Marker != nil && player1Marker != ""{
+            UIConfig.player1 = String(player1Marker)
         } else {
             UIConfig.player1 = "X"
         }
         
-        if let player2Marker = defaults.stringForKey("SettingsPlayer2Marker"){
-            UIConfig.player2 = String(player2Marker.characters.first!)
+        let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
+        if player2Marker != nil && player2Marker != ""{
+            UIConfig.player2 = String(player2Marker)
         } else {
             UIConfig.player2 = "O"
         }

@@ -25,7 +25,17 @@ public class DefaultGameInteractor: GameInteractor {
         statusView.displayTurn(message: game.getTurnMessage())
     }
     
+    public func resetGame(game: Game) {
+        print("resetting game")
+        boardView.clearSpots()
+        statusView.displayTurn(message: game.getTurnMessage())
+        game.resetGame()
+        startGame(game)
+    }
     
+    public func warnReset() {
+        statusView.displayTurn(message: "Resetting game...")
+    }
     
     public func makeMove(spotIndex: Int?) {
         indicatorView.moveInProgress()

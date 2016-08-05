@@ -41,6 +41,16 @@ class BoardStackViewTests: QuickSpec {
                 let xMarker = UIImage(named: "letter-x")!
                 expect(boardView.getImageForMarker("X")).to(equal(xMarker))
             }
+            
+            it("can clear the board") {
+                boardView.clearSpots()
+                for view in boardView.subviews{
+                    for button in view.subviews {
+                        let btn = button as! UIButton
+                        expect(btn.titleLabel).to(equal(""))
+                    }
+                }
+            }
         }
     }
     
