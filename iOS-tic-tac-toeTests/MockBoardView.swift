@@ -13,4 +13,7 @@ class MockBoardView: NSObject, BoardView {
         spotsEnabled = enabled
     }
     
+    func clearSpots() {
+        visibleBoard = [String]()
+    }
 }

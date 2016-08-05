@@ -23,4 +23,16 @@ public class GameViewController: UIViewController {
         interactor.makeMove(sender.tag)
         interactor.completeTurn()
     }
+    
+    override public func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override public func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        interactor.warnReset()
+    }
+    
+    override public func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        interactor.resetGame(GameConfig.game)
+    }
 }

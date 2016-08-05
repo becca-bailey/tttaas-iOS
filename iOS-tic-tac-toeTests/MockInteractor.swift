@@ -22,5 +22,13 @@ public class MockInteractor: NSObject, GameInteractor {
         turnCompleted = true
     }
     
+    public func resetGame(game: Game) {
+        
+    }
+    
+    public func warnReset() {
+        
+    }
+    
 
 }
