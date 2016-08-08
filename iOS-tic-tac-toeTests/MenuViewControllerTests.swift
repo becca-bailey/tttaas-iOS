@@ -2,12 +2,12 @@ import iOS_tic_tac_toe
 import Quick
 import Nimble
 
-class ViewControllerSpec: QuickSpec {
+class MenuViewControllerSpec: QuickSpec {
     override func spec() {
-        let controller = ViewController()
+        let controller = MenuViewController()
         let button = UIButton()
     
-        describe("View Controller") {
+        describe("Menu View Controller") {
             it("can set the game type to HumanVsHuman") {
                 controller.newPlayerVsPlayerGame(button)
                 expect(GameConfig.gameType).to(equal(GameConfig.humanVsHuman))

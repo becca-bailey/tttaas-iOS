@@ -11,10 +11,10 @@
 		88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0A1D4279850064CE60 /* UIConfig.swift */; };
 		88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */; };
 		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
-		8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */; };
+		8826CC4C1D47CA7900838C16 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */; };
 		883089E41D40137100D79AA7 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* HTTPClient.swift */; };
 		883621441D369F73007F43D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621431D369F73007F43D0 /* AppDelegate.swift */; };
-		883621461D369F73007F43D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621451D369F73007F43D0 /* ViewController.swift */; };
+		883621461D369F73007F43D0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883621451D369F73007F43D0 /* MenuViewController.swift */; };
 		883621491D369F73007F43D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883621471D369F73007F43D0 /* Main.storyboard */; };
 		8836214B1D369F73007F43D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8836214A1D369F73007F43D0 /* Assets.xcassets */; };
 		8836214E1D369F73007F43D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */; };
@@ -66,11 +66,11 @@
 		88054C0A1D4279850064CE60 /* UIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 		88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfigTests.swift; sourceTree = "<group>"; };
 		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
-		8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
 		883089E31D40137100D79AA7 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		883621401D369F73007F43D0 /* iOS-tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		883621431D369F73007F43D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		883621451D369F73007F43D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		883621451D369F73007F43D0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		883621481D369F73007F43D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8836214A1D369F73007F43D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8836214D1D369F73007F43D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			children = (
 				883621651D36A13F007F43D0 /* GameViewController.swift */,
 				883621431D369F73007F43D0 /* AppDelegate.swift */,
-				883621451D369F73007F43D0 /* ViewController.swift */,
+				883621451D369F73007F43D0 /* MenuViewController.swift */,
 				883621471D369F73007F43D0 /* Main.storyboard */,
 				8836214A1D369F73007F43D0 /* Assets.xcassets */,
 				8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */,
@@ -177,7 +177,7 @@
 				883621581D369F73007F43D0 /* GameViewControllerTests.swift */,
 				8836215A1D369F73007F43D0 /* Info.plist */,
 				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
-				8826CC4B1D47CA7900838C16 /* ViewControllerTests.swift */,
+				8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */,
 				88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */,
 				88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */,
 				88E174A21D51220B001B28DA /* GameInteractorTests.swift */,
@@ -415,7 +415,7 @@
 				8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */,
 				88E1748C1D4FDECC001B28DA /* StatusLabelView.swift in Sources */,
 				88E174981D50E7AB001B28DA /* DefaultGameInteractor.swift in Sources */,
-				883621461D369F73007F43D0 /* ViewController.swift in Sources */,
+				883621461D369F73007F43D0 /* MenuViewController.swift in Sources */,
 				88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */,
 				88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */,
 				8899C7F31D5232F40013AC76 /* IndicatorView.swift in Sources */,
@@ -436,7 +436,7 @@
 				884367701D53E683003E5AA6 /* BoardTests.swift in Sources */,
 				88E174A51D512215001B28DA /* GameTests.swift in Sources */,
 				8899C7F71D5238730013AC76 /* MockIndicatorView.swift in Sources */,
-				8826CC4C1D47CA7900838C16 /* ViewControllerTests.swift in Sources */,
+				8826CC4C1D47CA7900838C16 /* MenuViewControllerTests.swift in Sources */,
 				88E174951D4FF30D001B28DA /* StatusLabelViewTests.swift in Sources */,
 				88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */,
 				88E174A31D51220B001B28DA /* GameInteractorTests.swift in Sources */,
