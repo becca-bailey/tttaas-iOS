@@ -1,6 +1,6 @@
 import UIKit
 
-public class ViewController: UIViewController {
+public class MenuViewController: UIViewController {
 
     @IBOutlet weak var gameTypeImage: UIImageView!
     @IBOutlet weak var gameTypeLink: UIButton!
@@ -9,14 +9,16 @@ public class ViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let player1Marker = defaults.stringForKey("SettingsPlayer1Marker")
         if player1Marker != nil && player1Marker != ""{
-            UIConfig.player1 = String(player1Marker!)
+             let userDefinedMarker = String(player1Marker!).characters.first
+            UIConfig.player1 = String(userDefinedMarker!)
         } else {
             UIConfig.player1 = "X"
         }
         
         let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
         if player2Marker != nil && player2Marker != ""{
-            UIConfig.player2 = String(player2Marker!)
+            let userDefinedMarker = String(player1Marker!).characters.first
+            UIConfig.player2 = String(userDefinedMarker!)
         } else {
             UIConfig.player2 = "O"
         }

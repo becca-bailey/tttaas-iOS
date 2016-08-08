@@ -20,14 +20,18 @@ public class BoardStackView: UIStackView, BoardView {
         }
     }
     
+    
+    
     public func setSpotToMarker(button: UIButton, marker: String) {
         button.titleLabel?.font = UIFont(name: UIConfig.defaultfont, size: 50)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         if (marker == "X") {
             button.enabled = false
+            button.setTitleColor(UIConfig.player1Color, forState: .Normal)
             button.setTitle(UIConfig.player1, forState: .Normal)
         } else if marker == "O"{
             button.enabled = false
+            button.setTitleColor(UIConfig.player2Color, forState: .Normal)
             button.setTitle(UIConfig.player2, forState: .Normal)
         } else {
             

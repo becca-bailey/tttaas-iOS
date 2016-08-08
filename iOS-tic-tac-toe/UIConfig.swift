@@ -1,3 +1,4 @@
+import UIKit
 public class UIConfig {
     public static let tieMessage = "It's a Tie!!"
     public static var player1 = "X"
@@ -16,7 +17,10 @@ public class UIConfig {
     public static let computerTurnMessage = "Computer's turn!"
     
     public static let defaultfont = "PingFangTC-Regular"
-        
+    
+    public static let player1Color = UIColor(red: 10/255, green: 222/255, blue: 198/255, alpha: 1.0)
+    public static let player2Color = UIColor.blackColor()
+    
     public static func winnerMessage(marker: String) -> String {
         return marker + " Wins!!"
     }
