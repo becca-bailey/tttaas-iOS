@@ -9,12 +9,11 @@ public class RequestHandler {
     }
     
     public func getGameResponse(game: Game) -> NSData? {
-        HTTPClient().makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: setData)
+        client.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: setData)
         return response
     }
     
     private func setData(data: NSData?) {
-        print(data)
         response = data
     }
     

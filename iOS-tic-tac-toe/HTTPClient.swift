@@ -4,7 +4,6 @@ class HTTPClient {
     var completedRequest: Bool = false
     
     func makePOSTRequest(url:String, body:String, onCompletion: (NSData?) -> ()){
-        print(body)
         var errorResponse = true
         while (errorResponse) {
             let request = NSMutableURLRequest(URL: NSURL(string: url)!)
@@ -13,9 +12,7 @@ class HTTPClient {
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
                 errorResponse = ((error != nil) || (data?.length > 100))
-                print(errorResponse)
                 if (!errorResponse) {
-                    print(data)
                     onCompletion(data)
                 }
                 self.completedRequest = true
