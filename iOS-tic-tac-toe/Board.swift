@@ -1,6 +1,3 @@
-
-import Foundation
-
 public class Board {
     
     public var boardArray = ["", "", "", "", "", "", "", "", ""]

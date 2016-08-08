@@ -1,9 +1,8 @@
-import Foundation
 public protocol Game: class{
     
     var isXTurn: Bool {get set}
     var board: Board {get set}
-    var status: String {get set}
+    var status: Status {get set}
     func changeCurrentPlayer()
     func getGameType() -> String
     func resetGame()

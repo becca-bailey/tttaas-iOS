@@ -1,5 +1,3 @@
-
-import Foundation
 import UIKit
 
 public class ActivityIndicatorView: UIActivityIndicatorView, IndicatorView {

@@ -9,14 +9,14 @@ public class ViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let player1Marker = defaults.stringForKey("SettingsPlayer1Marker")
         if player1Marker != nil && player1Marker != ""{
-            UIConfig.player1 = String(player1Marker)
+            UIConfig.player1 = String(player1Marker!)
         } else {
             UIConfig.player1 = "X"
         }
         
         let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
         if player2Marker != nil && player2Marker != ""{
-            UIConfig.player2 = String(player2Marker)
+            UIConfig.player2 = String(player2Marker!)
         } else {
             UIConfig.player2 = "O"
         }
@@ -43,7 +43,7 @@ public class ViewController: UIViewController {
         toggleGameTypeLink()
     }
     
-    func toggleGameTypeImage() {
+    private func toggleGameTypeImage() {
         if (gameTypeImage.image == UIImage(named: UIConfig.computerVsHumanImage)) {
             gameTypeImage.image = UIImage(named: UIConfig.humanVsComputerImage)
         } else {
@@ -51,7 +51,7 @@ public class ViewController: UIViewController {
         }
     }
     
-    func toggleGameTypeLink() {
+    private func toggleGameTypeLink() {
         if (gameTypeLink.tag == 0) {
             gameTypeLink.setTitle(UIConfig.computerVsPlayerLabel, forState: .Normal)
             gameTypeLink.tag = 1

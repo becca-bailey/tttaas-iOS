@@ -1,6 +1,4 @@
 
-import Foundation
-
 public class DefaultGameInteractor: GameInteractor {
     
     public var game : Game!
@@ -26,8 +24,8 @@ public class DefaultGameInteractor: GameInteractor {
     }
     
     public func resetGame(game: Game) {
-        print("resetting game")
         boardView.clearSpots()
+        boardView.enableSpots()
         statusView.displayTurn(message: game.getTurnMessage())
         game.resetGame()
         startGame(game)
@@ -65,7 +63,7 @@ public class DefaultGameInteractor: GameInteractor {
         } else if (game.status == Status.tie) {
             statusView.displayTie()
         }
-        boardView.spotsEnabled(false)
+        boardView.disableSpots()
     }
     
     public func nextTurn() {

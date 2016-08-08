@@ -18,7 +18,6 @@ class HTTPClient {
                     print(data)
                     onCompletion(data)
                 }
-                sleep(1)
                 self.completedRequest = true
             })
             task.resume()

@@ -29,10 +29,14 @@ public class GameViewController: UIViewController {
     }
     
     override public func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        interactor.warnReset()
+        if (motion == .MotionShake) {
+            interactor.warnReset()
+        }
     }
     
     override public func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        interactor.resetGame(GameConfig.game)
+        if (motion == .MotionShake) {
+            interactor.resetGame(GameConfig.game)
+        }
     }
 }
