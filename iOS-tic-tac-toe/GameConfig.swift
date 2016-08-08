@@ -1,4 +1,5 @@
 import Foundation
+
 public class GameConfig {
     public static let serverURL = "http://stormy-savannah-24890.herokuapp.com/game"
     

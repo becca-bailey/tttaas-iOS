@@ -13,7 +13,7 @@ public class ResponseHandler {
         return game
     }
     
-    public func getGameStatus() -> String {
+    public func getGameStatus() -> Status {
         var stringData = ""
         if let response = responseData {
             do {
@@ -23,7 +23,8 @@ public class ResponseHandler {
                 print("error serializing json: \(error)")
             }
         }
-        return stringData
+        let status = Status(rawValue: stringData)
+        return status != nil ? status! : Status.empty
     }
     
     

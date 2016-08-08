@@ -9,8 +9,12 @@ class MockBoardView: NSObject, BoardView {
         visibleBoard = board
     }
     
-    func spotsEnabled(enabled: Bool) {
-        spotsEnabled = enabled
+    func enableSpots() {
+        spotsEnabled = true
+    }
+    
+    func disableSpots() {
+        spotsEnabled = false
     }
     
     func clearSpots() {

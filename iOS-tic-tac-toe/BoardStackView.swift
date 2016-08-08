@@ -1,19 +1,6 @@
-import Foundation
 import UIKit
-
+import Foundation
 public class BoardStackView: UIStackView, BoardView {
-    
-//    public func show(board board: [String]) {
-//        for view in self.subviews{
-//            for button in view.subviews {
-//                let btn = button as! UIButton
-//                if let image = getImageForMarker(board[btn.tag]) {
-//                    btn.enabled = false
-//                    btn.setBackgroundImage(scaleImage(image, button: btn), forState: .Normal)
-//                }
-//            }
-//        }
-//    }
     
     public func show(board board: [String]) {
         for view in self.subviews{
@@ -51,7 +38,15 @@ public class BoardStackView: UIStackView, BoardView {
         return UIImage(named: "letter-\(marker.lowercaseString)")
     }
     
-    public func spotsEnabled(enabled: Bool) {
+    public func disableSpots() {
+        setSpotsEnabled(false)
+    }
+    
+    public func enableSpots() {
+        setSpotsEnabled(true)
+    }
+    
+    private func setSpotsEnabled(enabled: Bool) {
         for view in self.subviews{
             for button in view.subviews {
                 let btn = button as! UIButton

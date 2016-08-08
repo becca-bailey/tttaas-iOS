@@ -1,9 +1,8 @@
-import Foundation
 public class PlayerVsComputer : Game {
     
     public var isXTurn: Bool = true
     public var board = Board()
-    public var status = ""
+    public var status = Status.empty
     
     required public init() {
         

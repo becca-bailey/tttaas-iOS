@@ -1,5 +1,4 @@
 import iOS_tic_tac_toe
-import Foundation
 import Quick
 import Nimble
 
@@ -13,7 +12,7 @@ class BoardStackViewTests: QuickSpec {
         describe("BoardStackView") {
             
             it ("can disable all buttons on the board") {
-                boardView.spotsEnabled(false)
+                boardView.disableSpots()
                 expect(self.buttonsEnabled(boardView, enabled: false)).to(beTrue())
             }
             
