@@ -17,7 +17,7 @@ public class MenuViewController: UIViewController {
         
         let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
         if player2Marker != nil && player2Marker != ""{
-            let userDefinedMarker = String(player1Marker!).characters.first
+            let userDefinedMarker = String(player2Marker!).characters.first
             UIConfig.player2 = String(userDefinedMarker!)
         } else {
             UIConfig.player2 = "O"

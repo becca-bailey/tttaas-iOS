@@ -301,7 +301,6 @@
 				TargetAttributes = {
 					8836213F1D369F73007F43D0 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 89S532BYNF;
 					};
 					883621531D369F73007F43D0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -572,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.8thLight.OS-tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -586,6 +586,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.8thLight.OS-tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
