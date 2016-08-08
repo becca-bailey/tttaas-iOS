@@ -21,7 +21,6 @@ public class GameViewController: UIViewController {
 
     @IBAction public func makeMove(sender: UIButton) {
         interactor.makeMove(sender.tag)
-        interactor.completeTurn()
     }
     
     override public func canBecomeFirstResponder() -> Bool {

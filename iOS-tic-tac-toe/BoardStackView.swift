@@ -16,11 +16,10 @@ public class BoardStackView: UIStackView, BoardView {
            for button in view.subviews {
                 let btn = button as! UIButton
                 btn.setTitle("", forState: .Normal)
+                btn.enabled = true
             }
         }
     }
-    
-    
     
     public func setSpotToMarker(button: UIButton, marker: String) {
         button.titleLabel?.font = UIFont(name: UIConfig.defaultfont, size: 50)
@@ -43,21 +42,26 @@ public class BoardStackView: UIStackView, BoardView {
     }
     
     public func disableSpots() {
-        setSpotsEnabled(false)
-    }
-    
-    public func enableSpots() {
-        setSpotsEnabled(true)
-    }
-    
-    private func setSpotsEnabled(enabled: Bool) {
         for view in self.subviews{
             for button in view.subviews {
                 let btn = button as! UIButton
-                btn.enabled = enabled
+                btn.enabled = false
+            }
+        }
+
+    }
+    
+    public func enableSpots() {
+        for view in self.subviews{
+            for button in view.subviews {
+                let btn = button as! UIButton
+                if (btn.titleLabel?.text == nil || btn.titleLabel?.text == ""){
+                    btn.enabled = true
+                }
             }
         }
     }
+
     
     public func scaleImage(image: UIImage, button:UIButton) -> UIImage {
         let newSize = CGSizeMake(button.frame.width, button.frame.height)

@@ -16,6 +16,19 @@ class BoardStackViewTests: QuickSpec {
                 expect(self.buttonsEnabled(boardView, enabled: false)).to(beTrue())
             }
             
+            it("can enable all of the spots") {
+                boardView.disableSpots()
+                boardView.enableSpots()
+                expect(self.buttonsEnabled(boardView, enabled: true)).to(beTrue())
+            }
+            
+            it("can enable only the empty spots") {
+                boardView.disableSpots()
+                boardView.show(board: ["X","X","","","","O","","",""])
+                boardView.enableSpots()
+                expect(self.buttonsEnabled(boardView, enabled: false)).to(beTrue())
+            }
+            
             it("can prevent a player from playing again on the same spot") {
                 expect(self.buttonsEnabled(boardView, enabled: true)).to(beTrue())
                 
@@ -40,6 +53,7 @@ class BoardStackViewTests: QuickSpec {
                 let xMarker = UIImage(named: "letter-x")!
                 expect(boardView.getImageForMarker("X")).to(equal(xMarker))
             }
+            
             
             it("can clear the board") {
                 boardView.clearSpots()
