@@ -44,6 +44,7 @@ public class DefaultGameInteractor: GameInteractor {
         let responseHandler = ResponseHandler(responseData: requestHandler.getGameResponse(game))
         game = responseHandler.getUpdatedGame(game)
         boardView.show(board: game.board.asArray())
+        completeTurn()
     }
     
     public func completeTurn() {
