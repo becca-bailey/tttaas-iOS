@@ -14,7 +14,7 @@ public class UIConfig {
     public static let playerVsComputerLabel = "Player vs. Computer"
     
     public static let playerTurnMessage = "Your turn!"
-    public static let computerTurnMessage = "Computer's turn!"
+    public static let computerTurnMessage = "Computer is thinking..."
     
     public static let defaultfont = "PingFangTC-Regular"
     

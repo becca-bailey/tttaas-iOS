@@ -1,27 +1,20 @@
 import Foundation
 
 class HTTPClient {
-    var completedRequest: Bool = false
+    //rename to async HTTPClient
+    //should be a protocol
     
     func makePOSTRequest(url:String, body:String, onCompletion: (NSData?) -> ()){
-        var errorResponse = true
-        while (errorResponse) {
-            let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-            request.HTTPMethod = "POST"
-            request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                errorResponse = ((error != nil) || (data?.length > 100))
-                if (!errorResponse) {
-                    onCompletion(data)
-                }
-                self.completedRequest = true
-            })
-            task.resume()
-            while !self.completedRequest {
-                // Stop running until request completes
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response, data, error) -> Void in
+            if ((error != nil) || (data?.length > 100)) {
+                self.makePOSTRequest(url, body: body, onCompletion: onCompletion)
+            } else {
+                onCompletion(data)
+                //accept parsed data
             }
-            self.completedRequest = false
-        }
+        });
     }
 }

@@ -72,11 +72,10 @@ class GameInteractorTests: QuickSpec {
                 expect(mockStatusView.statusMessage).to(contain("Player 2"))
             }
             
-//            it("indicates that a move is in progress") {
-//                gameInteractor.makeMove(0)
-//                
-//                expect(mockIndicatorView.spinnerStarted).to(beTrue())
-//            }
+            it("can create JSON for us") {
+                let json = gameInteractor.createJSONRequestBody(gameInteractor.game)
+                expect(json).to(equal("{\"board\": [\"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"], \"gameType\": humanVsHuman}"))
+            }
             
             it("stops the spinner when a turn is completed") {
                 gameInteractor.completeTurn()

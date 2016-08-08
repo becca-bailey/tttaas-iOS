@@ -1,11 +1,14 @@
-
+import Foundation
 public class DefaultGameInteractor: GameInteractor {
     
     public var game : Game!
-    let requestHandler = RequestHandler(client: HTTPClient())
+    let client : HTTPClient = HTTPClient()
     let boardView : BoardView
     let statusView : StatusView
     let indicatorView : IndicatorView
+    var start = NSDate()
+    var end = NSDate()
+    
     
     required public init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView) {
         self.boardView = boardView
@@ -36,19 +39,40 @@ public class DefaultGameInteractor: GameInteractor {
     }
     
     public func makeMove(spotIndex: Int?) {
+        start = NSDate()
+        boardView.disableSpots()
+        if (game.getGameType() == GameConfig.humanVsComputer){
+            statusView.displayTurn(message: UIConfig.computerTurnMessage)
+        }
         indicatorView.moveInProgress()
         if let spotIndex = spotIndex {
             game.updateBoard(spotIndex)
             boardView.show(board: game.board.asArray())
         }
-        let responseHandler = ResponseHandler(responseData: requestHandler.getGameResponse(game))
-        game = responseHandler.getUpdatedGame(game)
-        boardView.show(board: game.board.asArray())
-        completeTurn()
+        client.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+    }
+    
+    public func successfulRequest(data: NSData?) {
+        let responseHandler = ResponseHandler(responseData: data)
+        self.game = responseHandler.getUpdatedGame(self.game)
+        self.standadizedWaitTime()
+        self.boardView.show(board: self.game.board.asArray())
+        self.completeTurn()
+    }
+    
+    public func standadizedWaitTime(){
+        if (self.game.getGameType() == GameConfig.humanVsComputer) {
+            end = NSDate()
+            let difference = end.timeIntervalSinceDate(start)
+            if (difference < 2) {
+                sleep(UInt32(2 - difference))
+            }
+        }
     }
     
     public func completeTurn() {
         indicatorView.moveDone()
+        boardView.enableSpots()
         if (game.isOver()){
             endGame()
         } else {
@@ -71,8 +95,11 @@ public class DefaultGameInteractor: GameInteractor {
         game.changeCurrentPlayer()
         statusView.displayTurn(message: game.getTurnMessage())
     }
-    
+
+    public func createJSONRequestBody(game: Game) -> String {
+        return "{\"board\": \(game.board.asArray().description), \"gameType\": \(game.getGameType())}"
+    }
 }
-    
+
 
     

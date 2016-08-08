@@ -40,7 +40,6 @@
 		88E174981D50E7AB001B28DA /* DefaultGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174971D50E7AB001B28DA /* DefaultGameInteractor.swift */; };
 		88E1749A1D50F6D6001B28DA /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174991D50F6D6001B28DA /* GameInteractor.swift */; };
 		88E1749C1D50FD60001B28DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749B1D50FD60001B28DA /* Board.swift */; };
-		88E1749E1D510049001B28DA /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749D1D510049001B28DA /* RequestHandler.swift */; };
 		88E174A01D5101DF001B28DA /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1749F1D5101DF001B28DA /* ResponseHandler.swift */; };
 		88E174A31D51220B001B28DA /* GameInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174A21D51220B001B28DA /* GameInteractorTests.swift */; };
 		88E174A51D512215001B28DA /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174A41D512215001B28DA /* GameTests.swift */; };
@@ -99,7 +98,6 @@
 		88E174971D50E7AB001B28DA /* DefaultGameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGameInteractor.swift; sourceTree = "<group>"; };
 		88E174991D50F6D6001B28DA /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		88E1749B1D50FD60001B28DA /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		88E1749D1D510049001B28DA /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		88E1749F1D5101DF001B28DA /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		88E174A21D51220B001B28DA /* GameInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractorTests.swift; sourceTree = "<group>"; };
 		88E174A41D512215001B28DA /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 		88E174A11D5101E7001B28DA /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				88E1749D1D510049001B28DA /* RequestHandler.swift */,
 				88E1749F1D5101DF001B28DA /* ResponseHandler.swift */,
 				883089E31D40137100D79AA7 /* HTTPClient.swift */,
 			);
@@ -407,7 +404,6 @@
 				88E1748A1D4FDDA5001B28DA /* StatusView.swift in Sources */,
 				883089E41D40137100D79AA7 /* HTTPClient.swift in Sources */,
 				88054C091D4278150064CE60 /* Status.swift in Sources */,
-				88E1749E1D510049001B28DA /* RequestHandler.swift in Sources */,
 				8899C7F51D52334A0013AC76 /* ActivityIndicatorView.swift in Sources */,
 				88E1749C1D50FD60001B28DA /* Board.swift in Sources */,
 				88E1749A1D50F6D6001B28DA /* GameInteractor.swift in Sources */,

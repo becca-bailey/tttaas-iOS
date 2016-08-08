@@ -160,27 +160,27 @@
                                 <rect key="frame" x="20" y="40" width="560" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1's Turn!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-Oi-guF" customClass="StatusLabelView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="58"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H53-cP-bta">
-                                        <rect key="frame" x="0.0" y="68" width="560" height="63"/>
-                                        <color key="backgroundColor" red="0.040432656390000002" green="0.87000000479999995" blue="0.77752265890000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="37" width="560" height="63"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
-                                        <state key="normal" title="Play again">
+                                        <state key="normal" title="New Game">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="jz3-Rg-pg8"/>
                                         </connections>
                                     </button>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-Yt-tb4" customClass="ActivityIndicatorView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="560" height="0.0"/>
+                                    <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-Yt-tb4" customClass="ActivityIndicatorView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="560" height="20"/>
                                     </activityIndicatorView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-v9-oIF">
-                                        <rect key="frame" x="0.0" y="141" width="560" height="368"/>
+                                        <rect key="frame" x="0.0" y="140" width="560" height="368"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-ET-Mcv" customClass="BoardStackView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
                                                 <rect key="frame" x="98" y="0.0" width="367" height="367"/>
