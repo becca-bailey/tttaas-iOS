@@ -1,15 +1,37 @@
 import UIKit
 
 public class MenuViewController: UIViewController {
-
+    @IBOutlet weak public var player1MarkerLabel: UILabel!
+    @IBOutlet weak public var player2MarkerLabel: UILabel!
+    
     @IBOutlet weak var gameTypeImage: UIImageView!
     @IBOutlet weak var gameTypeLink: UIButton!
     
     public override func viewDidLoad() {
+        appMovedToForeground()
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    func appMovedToForeground() {
+        setPlayerMarkers()
+        displayPlayerMarkers()
+    }
+
+    @IBAction func navigateToSettings(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
+    }
+    
+    public func displayPlayerMarkers() {
+        player1MarkerLabel.text = "Player 1's Marker: \(UIConfig.player1)"
+        player2MarkerLabel.text = "Player 2's Marker: \(UIConfig.player2)"
+    }
+
+    public func setPlayerMarkers() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let player1Marker = defaults.stringForKey("SettingsPlayer1Marker")
         if player1Marker != nil && player1Marker != ""{
-             let userDefinedMarker = String(player1Marker!).characters.first
+            let userDefinedMarker = String(player1Marker!).characters.first
             UIConfig.player1 = String(userDefinedMarker!)
         } else {
             UIConfig.player1 = "X"
