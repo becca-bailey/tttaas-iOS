@@ -13,5 +13,15 @@ public class PlayerVsComputer : Game {
     }
     
     public func changeCurrentPlayer() {
+
+        
+    }
+    
+    public func getTurnMessage() -> String {
+        if (isXTurn) {
+            return UIConfig.playerTurnMessage
+        } else {
+            return UIConfig.computerTurnMessage
+        }
     }
 }

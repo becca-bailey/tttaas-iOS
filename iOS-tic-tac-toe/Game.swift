@@ -6,6 +6,7 @@ public protocol Game: class{
     func changeCurrentPlayer()
     func getGameType() -> String
     func resetGame()
+    func getTurnMessage() -> String
 }
 
 extension Game {
@@ -18,16 +19,6 @@ extension Game {
             return "X"
         } else {
             return "O"
-        }
-    }
-    
-    public func getTurnMessage() -> String {
-        if getGameType() == GameConfig.humanVsComputer && isXTurn {
-            return UIConfig.playerTurnMessage
-        } else if getGameType() == GameConfig.humanVsComputer && !isXTurn {
-            return UIConfig.computerTurnMessage
-        } else {
-            return UIConfig.getLabelForPlayerVsPlayerGame(isXTurn)
         }
     }
     

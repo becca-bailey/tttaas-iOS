@@ -11,8 +11,12 @@ public class PlayerVsPlayer : Game {
     public func getGameType() -> String{
         return GameConfig.humanVsHuman
     }
+    
     public func changeCurrentPlayer() {
         isXTurn = !isXTurn
     }
 
+    public func getTurnMessage() -> String {
+        return UIConfig.getLabelForPlayerVsPlayerGame(isXTurn)
+    }
 }
