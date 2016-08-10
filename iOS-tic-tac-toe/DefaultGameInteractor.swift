@@ -17,13 +17,14 @@ public class DefaultGameInteractor: GameInteractor {
     }
     
     public func startGame(game: Game) {
-        statusView.displayTurn(message: game.getTurnMessage())
         self.game = game
         if (game.getGameType() == GameConfig.humanVsComputer && game.isXTurn == false) {
             makeMove(nil)
             self.game.isXTurn = true
+            statusView.displayTurn(message: UIConfig.computerTurnMessage)
+        } else {
+            statusView.displayTurn(message: game.getTurnMessage())
         }
-        statusView.displayTurn(message: game.getTurnMessage())
     }
     
     public func resetGame(game: Game) {
