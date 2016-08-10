@@ -2,7 +2,7 @@ import Foundation
 public class DefaultGameInteractor: GameInteractor {
     
     public var game : Game!
-    let client : HTTPClient = HTTPClient()
+    let httpClient : HTTPClient
     let boardView : BoardView
     let statusView : StatusView
     let indicatorView : IndicatorView
@@ -10,10 +10,11 @@ public class DefaultGameInteractor: GameInteractor {
     var end = NSDate()
     
     
-    required public init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView) {
+    required public init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView, httpClient: HTTPClient) {
         self.boardView = boardView
         self.statusView = statusView
         self.indicatorView = indicatorView
+        self.httpClient = httpClient
     }
     
     public func startGame(game: Game) {
@@ -50,7 +51,7 @@ public class DefaultGameInteractor: GameInteractor {
             game.updateBoard(spotIndex)
             boardView.show(board: game.board.asArray())
         }
-        client.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+        httpClient.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
     }
     
     public func successfulRequest(data: NSData?) {

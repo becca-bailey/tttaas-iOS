@@ -13,7 +13,8 @@ public class GameViewController: UIViewController {
         interactor = DefaultGameInteractor(
             boardView: boardView,
             statusView: statusView,
-            indicatorView: indicatorView)
+            indicatorView: indicatorView,
+            httpClient: AsyncHTTPClient())
         
         interactor.startGame(GameConfig.game)
         

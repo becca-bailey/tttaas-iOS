@@ -8,12 +8,14 @@ class GameInteractorTests: QuickSpec {
         var mockBoardView: MockBoardView!
         var mockStatusView: MockStatusView!
         var mockIndicatorView: MockIndicatorView!
+        var mockHTTPClient: MockHTTPClient!
         
         beforeEach() {
             mockBoardView = MockBoardView()
             mockStatusView = MockStatusView()
             mockIndicatorView = MockIndicatorView()
-            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView)
+            mockHTTPClient = MockHTTPClient(board: ["X", "O", "", "", "", "", "", "", ""], status: "in progress")
+            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView, httpClient: mockHTTPClient)
             gameInteractor.game = PlayerVsPlayer()
         }
         
@@ -24,6 +26,21 @@ class GameInteractorTests: QuickSpec {
                 gameInteractor.startGame(game)
                 expect(mockStatusView.statusMessage).to(equal(game.getTurnMessage()))
                 expect(gameInteractor.game).to(be(game))
+            }
+            
+            it("making a move sends a request") {
+                gameInteractor.makeMove(0)
+                expect(mockHTTPClient.requestMade).to(beTrue())
+            }
+            
+            it("can make a move and update the game with the response") {
+                gameInteractor.makeMove(1)
+                expect(gameInteractor.game.board.asArray()).to(equal(["X", "O", "", "", "", "", "", "", ""]))
+            }
+            
+            it("can make a move and update the game with the response and show it") {
+                gameInteractor.makeMove(1)
+                expect(mockBoardView.visibleBoard).to(equal(["X", "O", "", "", "", "", "", "", ""]))
             }
             
             it("changes the label at the end of the game if X wins") {
