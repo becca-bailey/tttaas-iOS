@@ -6,7 +6,7 @@ public class MockInteractor: NSObject, GameInteractor {
     public var moveMade: Int!
     public var turnCompleted: Bool! = false
     
-    public required init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView) {
+    public required init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView, httpClient: HTTPClient) {
         
     }
     

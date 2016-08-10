@@ -8,7 +8,7 @@ class GameViewControllerSpec: QuickSpec {
         var mockInteractor: MockInteractor!
         
         beforeEach() {
-            mockInteractor = MockInteractor(boardView: MockBoardView(), statusView: MockStatusView(), indicatorView: MockIndicatorView())
+            mockInteractor = MockInteractor(boardView: MockBoardView(), statusView: MockStatusView(), indicatorView: MockIndicatorView(), httpClient: MockHTTPClient(board: ["","","","","","","","",""], status: "in progress"))
             gameController = GameViewController()
             gameController.interactor = mockInteractor
         }
