@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,8 +26,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2F-fj-RH4">
                                         <rect key="frame" x="0.0" y="0.0" width="540" height="170"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Welcome to 
-Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ago-zl-7ES">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Welcome to  Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ago-zl-7ES">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="131"/>
                                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="42"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,20 +43,20 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="tNG-Bn-wVU"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-Bg-fiS">
-                                        <rect key="frame" x="10" y="195" width="520" height="186"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-Bg-fiS">
+                                        <rect key="frame" x="10" y="195" width="520" height="179"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DfR-RX-nl3">
-                                                <rect key="frame" x="0.0" y="0.0" width="520" height="87"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DfR-RX-nl3">
+                                                <rect key="frame" x="0.0" y="0.0" width="520" height="84"/>
                                                 <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="HumanVsHuman" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-VG-oaJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="87"/>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="HumanVsHuman" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-VG-oaJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="84"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mc0-oj-uWZ">
-                                                        <rect key="frame" x="189" y="25" width="331" height="38"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mc0-oj-uWZ">
+                                                        <rect key="frame" x="189" y="23" width="331" height="38"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                                                         <state key="normal" title="Player vs. Player">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <state key="highlighted">
@@ -73,30 +72,31 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                     <constraint firstItem="MxX-VG-oaJ" firstAttribute="width" secondItem="DfR-RX-nl3" secondAttribute="width" multiplier="1:3" id="Fzx-7n-Owo"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XgX-W7-R02">
-                                                <rect key="frame" x="0.0" y="99" width="520" height="87"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XgX-W7-R02">
+                                                <rect key="frame" x="0.0" y="96" width="520" height="84"/>
                                                 <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="HumanVsComputer" translatesAutoresizingMaskIntoConstraints="NO" id="BJM-8j-m9o">
-                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="87"/>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="HumanVsComputer" translatesAutoresizingMaskIntoConstraints="NO" id="BJM-8j-m9o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="84"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="miO-qx-ww9">
-                                                        <rect key="frame" x="189" y="25" width="256" height="38"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="miO-qx-ww9">
+                                                        <rect key="frame" x="189" y="23" width="256" height="38"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                                                         <state key="normal" title="Player vs. Computer">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="newPlayerVsComputerGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFj-M8-HFc"/>
                                                             <segue destination="Tbk-D1-N2I" kind="show" id="d1c-OE-nY3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-Dv-SIP">
-                                                        <rect key="frame" x="460" y="14" width="60" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-Dv-SIP">
+                                                        <rect key="frame" x="460" y="12" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rQF-Dv-SIP" secondAttribute="height" multiplier="1:1" id="FKw-8J-pvQ"/>
                                                         </constraints>
                                                         <state key="normal" image="repeat-1"/>
                                                         <connections>
+                                                            <action selector="animateSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="54d-Gn-koD"/>
                                                             <action selector="switchGameType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIA-n3-gfk"/>
                                                         </connections>
                                                     </button>
@@ -108,31 +108,36 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-RO-1XH">
-                                        <rect key="frame" x="193" y="406" width="154" height="92"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-RO-1XH">
+                                        <rect key="frame" x="181" y="399" width="178" height="99"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1's Marker: X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSv-Hf-Suy">
-                                                <rect key="frame" x="5" y="0.0" width="149" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Player 1's Marker: X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSv-Hf-Suy">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2's Marker: O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-1g-QcG">
-                                                <rect key="frame" x="0.0" y="31" width="154" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 2's Marker: O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-1g-QcG">
+                                                <rect key="frame" x="0.0" y="31" width="178" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-h7-03X">
-                                                <rect key="frame" x="0.0" y="62" width="154" height="30"/>
-                                                <state key="normal" title="Settings"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-h7-03X">
+                                                <rect key="frame" x="1" y="61" width="177" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                                <state key="normal" title=" ⚙ Marker Settings">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="navigateToSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K1q-uF-iZl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="WSv-Hf-Suy" firstAttribute="centerX" secondItem="Fsz-RO-1XH" secondAttribute="centerX" id="SXl-mX-4r1"/>
                                             <constraint firstItem="11e-h7-03X" firstAttribute="centerX" secondItem="Fsz-RO-1XH" secondAttribute="centerX" id="awP-9y-aCg"/>
+                                            <constraint firstItem="cjb-1g-QcG" firstAttribute="centerX" secondItem="Fsz-RO-1XH" secondAttribute="centerX" id="qQT-rk-XZc"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -178,14 +183,14 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-Bq-zCg">
                                 <rect key="frame" x="20" y="40" width="560" height="508"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1's Turn!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-Oi-guF" customClass="StatusLabelView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1's Turn!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-Oi-guF" customClass="StatusLabelView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="57.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H53-cP-bta">
-                                        <rect key="frame" x="0.0" y="37" width="560" height="63"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H53-cP-bta">
+                                        <rect key="frame" x="0.0" y="67.5" width="560" height="63"/>
                                         <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
                                         <state key="normal" title="New Game">
@@ -195,20 +200,20 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                             <segue destination="BYZ-38-t0r" kind="show" id="jz3-Rg-pg8"/>
                                         </connections>
                                     </button>
-                                    <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-Yt-tb4" customClass="ActivityIndicatorView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="560" height="20"/>
+                                    <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-Yt-tb4" customClass="ActivityIndicatorView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140.5" width="560" height="20"/>
                                     </activityIndicatorView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-v9-oIF">
-                                        <rect key="frame" x="0.0" y="140" width="560" height="368"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-v9-oIF">
+                                        <rect key="frame" x="0.0" y="170.5" width="560" height="337.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-ET-Mcv" customClass="BoardStackView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
-                                                <rect key="frame" x="98" y="0.0" width="367" height="367"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-ET-Mcv" customClass="BoardStackView" customModule="iOS_tic_tac_toe" customModuleProvider="target">
+                                                <rect key="frame" x="112" y="0.0" width="336.5" height="336.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-dZ-6E3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="119"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-dZ-6E3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="109"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R80-Qn-yOG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="R80-Qn-yOG" secondAttribute="height" multiplier="1:1" id="UGR-FM-nW9"/>
@@ -218,8 +223,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="n5Y-jd-bEe"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-rN-Yok">
-                                                                <rect key="frame" x="124" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-rN-Yok">
+                                                                <rect key="frame" x="113.5" y="0.0" width="109" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="nSO-rN-Yok" secondAttribute="height" multiplier="1:1" id="QAz-9m-tea"/>
@@ -228,8 +233,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="XWd-Ke-nDU"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-Nx-ggy">
-                                                                <rect key="frame" x="248" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-Nx-ggy">
+                                                                <rect key="frame" x="227.5" y="0.0" width="109" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="qgy-Nx-ggy" secondAttribute="height" multiplier="1:1" id="XO6-hy-Z9d"/>
@@ -240,11 +245,11 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-9Z-bM6">
-                                                        <rect key="frame" x="0.0" y="124" width="367" height="119"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-9Z-bM6">
+                                                        <rect key="frame" x="0.0" y="114" width="336.5" height="108.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc1-6c-9Zj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc1-6c-9Zj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="108.5"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="Zc1-6c-9Zj" secondAttribute="height" multiplier="1:1" id="JlV-P2-ZDQ"/>
@@ -253,8 +258,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="AdP-c2-Sl5"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cL-j1-nuy">
-                                                                <rect key="frame" x="124" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cL-j1-nuy">
+                                                                <rect key="frame" x="113.5" y="0.0" width="109" height="108.5"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="3cL-j1-nuy" secondAttribute="height" multiplier="1:1" id="0So-UU-tyh"/>
@@ -263,8 +268,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="Mrk-5m-Gia"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acC-Ar-V1R">
-                                                                <rect key="frame" x="248" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acC-Ar-V1R">
+                                                                <rect key="frame" x="227.5" y="0.0" width="109" height="108.5"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="acC-Ar-V1R" secondAttribute="height" multiplier="1:1" id="0T2-GV-2GK"/>
@@ -276,11 +281,11 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-40-FQH">
-                                                        <rect key="frame" x="0.0" y="248" width="367" height="119"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-40-FQH">
+                                                        <rect key="frame" x="0.0" y="227.5" width="336.5" height="109"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PES-bx-c0X">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="PES-bx-c0X" secondAttribute="height" multiplier="1:1" id="oTa-4H-aEF"/>
@@ -289,8 +294,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="E7G-gP-4KY"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xus-65-TAv">
-                                                                <rect key="frame" x="124" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xus-65-TAv">
+                                                                <rect key="frame" x="113.5" y="0.0" width="109" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="Xus-65-TAv" secondAttribute="height" multiplier="1:1" id="RWd-T9-x5k"/>
@@ -299,8 +304,8 @@ Tic Tac Toe!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" 
                                                                     <action selector="makeMove:" destination="Tbk-D1-N2I" eventType="touchUpInside" id="vzC-ur-V1U"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-Hs-4d6">
-                                                                <rect key="frame" x="248" y="0.0" width="119" height="119"/>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-Hs-4d6">
+                                                                <rect key="frame" x="227.5" y="0.0" width="109" height="109"/>
                                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="xOn-Hs-4d6" secondAttribute="height" multiplier="1:1" id="5Fp-Nc-51Q"/>

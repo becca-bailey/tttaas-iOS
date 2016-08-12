@@ -67,6 +67,13 @@ public class MenuViewController: UIViewController {
         toggleGameTypeLink()
     }
     
+    @IBAction func animateSwitch(sender: UIButton) {
+        UIView.animateWithDuration(0.75,
+            animations: {
+            sender.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2 * 2))
+            }, completion: nil)
+    }
+    
     private func toggleGameTypeImage() {
         if (gameTypeImage.image == UIImage(named: UIConfig.computerVsHumanImage)) {
             gameTypeImage.image = UIImage(named: UIConfig.humanVsComputerImage)
