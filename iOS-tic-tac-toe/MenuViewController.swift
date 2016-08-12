@@ -1,6 +1,9 @@
 import UIKit
 
 public class MenuViewController: UIViewController {
+    var rotation: CGFloat = 0.0
+    var switchRotation = true
+
     @IBOutlet weak public var player1MarkerLabel: UILabel!
     @IBOutlet weak public var player2MarkerLabel: UILabel!
     
@@ -65,6 +68,22 @@ public class MenuViewController: UIViewController {
     @IBAction func switchGameType(sender: UIButton) {
         toggleGameTypeImage()
         toggleGameTypeLink()
+    }
+    
+    @IBAction func animateSwitch(sender: UIButton) {
+        sender.alpha = 0.5
+        UIView.animateWithDuration(0.75,
+            animations: {
+                self.rotation += CGFloat(M_PI_2) * 2
+                if self.switchRotation {
+                    sender.transform = CGAffineTransformMakeRotation(self.rotation)
+                } else {
+                    sender.transform = CGAffineTransformMakeRotation(-self.rotation)
+                }
+            }, completion: { finished in
+                self.switchRotation = !self.switchRotation
+                sender.alpha = 1
+        })
     }
     
     private func toggleGameTypeImage() {
