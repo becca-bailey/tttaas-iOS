@@ -17,6 +17,10 @@ public class PlayerVsPlayer : Game {
     }
 
     public func getTurnMessage() -> String {
-        return UIConfig.getLabelForPlayerVsPlayerGame(isXTurn)
+        if (isXTurn) {
+            return "\(UIConfig.player1)'s Turn!!"
+        } else {
+            return "\(UIConfig.player2)'s Turn!!"
+        }
     }
 }
