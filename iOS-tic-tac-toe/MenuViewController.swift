@@ -2,7 +2,7 @@ import UIKit
 
 public class MenuViewController: UIViewController {
     var rotation: CGFloat = 0.0
-    var switchRotation = true
+    var humanVsComputerIsDisplayed = true;
 
     @IBOutlet weak public var player1MarkerLabel: UILabel!
     @IBOutlet weak public var player2MarkerLabel: UILabel!
@@ -33,7 +33,7 @@ public class MenuViewController: UIViewController {
     public func setPlayerMarkers() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let player1Marker = defaults.stringForKey("SettingsPlayer1Marker")
-        if player1Marker != nil && player1Marker != ""{
+        if markerExists(player1Marker) {
             let userDefinedMarker = String(player1Marker!).characters.first
             UIConfig.player1 = String(userDefinedMarker!)
         } else {
@@ -41,7 +41,7 @@ public class MenuViewController: UIViewController {
         }
         
         let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
-        if player2Marker != nil && player2Marker != ""{
+        if markerExists(player2Marker) {
             let userDefinedMarker = String(player2Marker!).characters.first
             UIConfig.player2 = String(userDefinedMarker!)
         } else {
@@ -49,13 +49,17 @@ public class MenuViewController: UIViewController {
         }
     }
     
+    private func markerExists(marker: String?) -> Bool {
+        return marker != nil && marker != ""
+    }
+
     @IBAction public func newPlayerVsPlayerGame(sender: UIButton) {
         GameConfig.gameType = GameConfig.humanVsHuman
         GameConfig.game = PlayerVsPlayer()
     }
     
     @IBAction public func newPlayerVsComputerGame(sender: UIButton) {
-        if (sender.tag == 0) {
+        if humanVsComputerIsDisplayed {
             GameConfig.gameType = GameConfig.humanVsComputer
             GameConfig.game = PlayerVsComputer()
         } else {
@@ -66,8 +70,8 @@ public class MenuViewController: UIViewController {
     }
     
     @IBAction func switchGameType(sender: UIButton) {
-        toggleGameTypeImage()
-        toggleGameTypeLink()
+        toggleGameDisplay()
+        humanVsComputerIsDisplayed = !humanVsComputerIsDisplayed
     }
     
     @IBAction func animateSwitch(sender: UIButton) {
@@ -75,32 +79,24 @@ public class MenuViewController: UIViewController {
         UIView.animateWithDuration(0.75,
             animations: {
                 self.rotation += CGFloat(M_PI_2) * 2
-                if self.switchRotation {
+                if self.humanVsComputerIsDisplayed {
                     sender.transform = CGAffineTransformMakeRotation(self.rotation)
                 } else {
                     sender.transform = CGAffineTransformMakeRotation(-self.rotation)
                 }
             }, completion: { finished in
-                self.switchRotation = !self.switchRotation
                 sender.alpha = 1
         })
     }
     
-    private func toggleGameTypeImage() {
-        if (gameTypeImage.image == UIImage(named: UIConfig.computerVsHumanImage)) {
-            gameTypeImage.image = UIImage(named: UIConfig.humanVsComputerImage)
-        } else {
+    private func toggleGameDisplay() {
+        if humanVsComputerIsDisplayed {
             gameTypeImage.image = UIImage(named: UIConfig.computerVsHumanImage)
-        }
-    }
-    
-    private func toggleGameTypeLink() {
-        if (gameTypeLink.tag == 0) {
             gameTypeLink.setTitle(UIConfig.computerVsPlayerLabel, forState: .Normal)
-            gameTypeLink.tag = 1
         } else {
+            gameTypeImage.image = UIImage(named: UIConfig.humanVsComputerImage)
             gameTypeLink.setTitle(UIConfig.playerVsComputerLabel, forState: .Normal)
-            gameTypeLink.tag = 0
+
         }
     }
 }

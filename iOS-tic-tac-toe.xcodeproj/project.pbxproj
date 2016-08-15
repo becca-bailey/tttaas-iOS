@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		88054C091D4278150064CE60 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C081D4278150064CE60 /* Status.swift */; };
 		88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0A1D4279850064CE60 /* UIConfig.swift */; };
-		88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */; };
 		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
 		8826CC4C1D47CA7900838C16 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */; };
 		883089E41D40137100D79AA7 /* AsyncHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883089E31D40137100D79AA7 /* AsyncHTTPClient.swift */; };
@@ -65,7 +64,6 @@
 		542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_tic_tac_toeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88054C081D4278150064CE60 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		88054C0A1D4279850064CE60 /* UIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
-		88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfigTests.swift; sourceTree = "<group>"; };
 		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
 		883089E31D40137100D79AA7 /* AsyncHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncHTTPClient.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				8843676F1D53E683003E5AA6 /* BoardTests.swift */,
 				883621581D369F73007F43D0 /* GameViewControllerTests.swift */,
 				8836215A1D369F73007F43D0 /* Info.plist */,
-				88054C0C1D427EBC0064CE60 /* UIConfigTests.swift */,
 				8826CC4B1D47CA7900838C16 /* MenuViewControllerTests.swift */,
 				88E174911D4FEE29001B28DA /* BoardStackViewTests.swift */,
 				88E174941D4FF30D001B28DA /* StatusLabelViewTests.swift */,
@@ -444,7 +441,6 @@
 				88E174921D4FEE29001B28DA /* BoardStackViewTests.swift in Sources */,
 				88E174A31D51220B001B28DA /* GameInteractorTests.swift in Sources */,
 				8895E28A1D5BBF48003207DB /* MockHTTPClient.swift in Sources */,
-				88054C0D1D427EBC0064CE60 /* UIConfigTests.swift in Sources */,
 				88E1748E1D4FE4B2001B28DA /* MockBoardView.swift in Sources */,
 				88E174901D4FEA03001B28DA /* MockStatusView.swift in Sources */,
 			);

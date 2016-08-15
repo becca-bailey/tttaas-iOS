@@ -24,14 +24,4 @@ public class UIConfig {
     public static func winnerMessage(marker: String) -> String {
         return marker + " Wins!!"
     }
-    
-    public static func getLabelForPlayerVsPlayerGame(xTurn: Bool) -> String {
-        var currentPlayerNumber = 1
-        if (xTurn) {
-            currentPlayerNumber = 1
-        } else {
-            currentPlayerNumber = 2
-        }
-        return "Player \(currentPlayerNumber)'s Turn!"
-    }
 }
