@@ -49,8 +49,8 @@ public class MenuViewController: UIViewController {
         }
     }
     
-    private func markerExists(marker: String?) -> Bool {
-        return marker != nil && marker != ""
+    public func markerExists(marker: String?) -> Bool {
+        return marker != nil && marker != "" && marker?.characters.first != " "
     }
 
     @IBAction public func newPlayerVsPlayerGame(sender: UIButton) {

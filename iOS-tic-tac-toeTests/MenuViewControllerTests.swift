@@ -46,6 +46,13 @@ class MenuViewControllerSpec: QuickSpec {
                 expect(label1.text!).to(contain("Y"))
                 expect(label2.text!).to(contain("X"))
             }
+            
+            it ("can check that the marker is valid") {
+                expect(controller.markerExists(nil)).to(beFalse())
+                expect(controller.markerExists("")).to(beFalse())
+                expect(controller.markerExists(" ")).to(beFalse())
+                expect(controller.markerExists("P")).to(beTrue())
+            }
         }
     }
     
