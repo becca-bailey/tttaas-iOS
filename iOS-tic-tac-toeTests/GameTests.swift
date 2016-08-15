@@ -47,15 +47,16 @@ class GameTests: QuickSpec {
             it("returns text that includes the Player 1's name") {
                 game.isXTurn = true
                 let nextPlayerText = game.getTurnMessage()
-                expect(nextPlayerText).to(contain("Player 1"))
+                expect(nextPlayerText).to(contain(UIConfig.player1))
             }
 
             it("returns text that includes the Player 2's name") {
                 game.isXTurn = false
                 let nextPlayerText = game.getTurnMessage()
-                expect(nextPlayerText).to(contain("Player 2"))
+                expect(nextPlayerText).to(contain(UIConfig.player2))
             }
 
+            
             it("returns 'Your turn!' if it is the human player's turn") {
                 game = PlayerVsComputer()
                 let nextPlayerText = game.getTurnMessage()

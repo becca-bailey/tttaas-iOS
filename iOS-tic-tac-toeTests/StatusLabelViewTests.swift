@@ -10,7 +10,7 @@ class StatusLabelViewSpec: QuickSpec {
                 let game = PlayerVsPlayer()
                 playerLabel.text = ""
                 playerLabel.displayTurn(message: game.getTurnMessage())
-                expect(playerLabel.text).to(contain("Player 1"))
+                expect(playerLabel.text).to(contain(UIConfig.player1))
             }
             
             it ("can set the status label when there's a tie") {

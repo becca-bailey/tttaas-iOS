@@ -64,7 +64,7 @@ class GameInteractorTests: QuickSpec {
                 gameInteractor.game.status = Status.inProgress
                 gameInteractor.completeTurn()
                 
-                expect(mockStatusView.statusMessage).to(equal("Player 2's Turn!"))
+                expect(mockStatusView.statusMessage).to(contain("'s Turn!"))
             }
             
             it("changes the label at the end of the game if O wins") {
@@ -86,7 +86,7 @@ class GameInteractorTests: QuickSpec {
                 gameInteractor.game.isXTurn = true
                 
                 gameInteractor.nextTurn()
-                expect(mockStatusView.statusMessage).to(contain("Player 2"))
+                expect(mockStatusView.statusMessage).to(contain(UIConfig.player2))
             }
             
             it("can create JSON for us") {
