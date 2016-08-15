@@ -10,11 +10,19 @@ public class GameViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        interactor = DefaultGameInteractor(
-            boardView: boardView,
-            statusView: statusView,
-            indicatorView: indicatorView,
-            httpClient: AsyncHTTPClient())
+        if (GameConfig.game.getGameType() == GameConfig.humanVsHuman) {
+            interactor = PlayerVsPlayerInteractor(
+                boardView: boardView,
+                statusView: statusView,
+                indicatorView: indicatorView,
+                httpClient: AsyncHTTPClient())
+        } else {
+            interactor = PlayerVsComputerInteractor(
+                boardView: boardView,
+                statusView: statusView,
+                indicatorView: indicatorView,
+                httpClient: AsyncHTTPClient())
+        }
         
         interactor.startGame(GameConfig.game)
         

@@ -18,14 +18,17 @@ class MenuViewControllerSpec: QuickSpec {
                 let clickedButton = self.buttonForGameType(button, gameType: GameConfig.humanVsComputer)
                 controller.newPlayerVsComputerGame(clickedButton)
                 expect(GameConfig.gameType).to(equal(GameConfig.humanVsComputer))
+                expect(GameConfig.game.isXTurn).to(beTrue())
                 expect(GameConfig.game.dynamicType).to(be(PlayerVsComputer().dynamicType))
             }
             
             it("can set the game type to ComputerVsHuman") {
                 let clickedButton = self.buttonForGameType(button, gameType: GameConfig.humanVsComputer)
                 button.tag = 1
+                controller.humanVsComputerIsDisplayed = false
                 controller.newPlayerVsComputerGame(clickedButton)
-                expect(GameConfig.gameType).to(equal(GameConfig.computerVsHuman))
+                expect(GameConfig.gameType).to(equal(GameConfig.humanVsComputer))
+                expect(GameConfig.game.isXTurn).to(beFalse())
                 expect(GameConfig.game.dynamicType).to(be(PlayerVsComputer().dynamicType))
             }
             
@@ -47,7 +50,7 @@ class MenuViewControllerSpec: QuickSpec {
     }
     
     func buttonForGameType(button: UIButton, gameType: String) -> UIButton {
-        if (gameType == GameConfig.computerVsHuman) {
+        if (gameType == GameConfig.humanVsComputer) {
             button.tag = 1
         } else {
             button.tag = 0

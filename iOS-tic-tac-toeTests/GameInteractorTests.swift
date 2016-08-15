@@ -4,7 +4,7 @@ import Nimble
 
 class GameInteractorTests: QuickSpec {
     override func spec() {
-        var gameInteractor: DefaultGameInteractor!
+        var gameInteractor: GameInteractor!
         var mockBoardView: MockBoardView!
         var mockStatusView: MockStatusView!
         var mockIndicatorView: MockIndicatorView!
@@ -15,11 +15,11 @@ class GameInteractorTests: QuickSpec {
             mockStatusView = MockStatusView()
             mockIndicatorView = MockIndicatorView()
             mockHTTPClient = MockHTTPClient(board: ["X", "O", "", "", "", "", "", "", ""], status: "in progress")
-            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView, httpClient: mockHTTPClient)
+            gameInteractor = PlayerVsPlayerInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView, httpClient: mockHTTPClient)
             gameInteractor.game = PlayerVsPlayer()
         }
         
-        describe("DefaultGameInteractor") {
+        describe("GameInteractor") {
             
             it("can start a game") {
                 let game = PlayerVsPlayer()
@@ -100,10 +100,6 @@ class GameInteractorTests: QuickSpec {
                 expect(mockIndicatorView.spinnerStopped).to(beTrue())
             }
             
-            it("needs this at the bottom") {
-                expect(true).to(equal(true))
-            }
-            
             it("can reset the game") {
                 let game = PlayerVsPlayer()
                 gameInteractor.resetGame(game)
@@ -111,6 +107,10 @@ class GameInteractorTests: QuickSpec {
                 expect(mockStatusView.statusMessage).to(equal(game.getTurnMessage()))
                 expect(game.board.asArray()).to(equal(["", "", "", "", "", "", "", "", ""]))
 
+            }
+            
+            it("needs this at the bottom") {
+                expect(true).to(equal(true))
             }
         }
     }

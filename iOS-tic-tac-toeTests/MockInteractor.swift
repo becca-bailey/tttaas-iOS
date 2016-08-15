@@ -3,12 +3,20 @@ import Foundation
 
 public class MockInteractor: NSObject, GameInteractor {
     public var game: Game!
+    public var boardView: BoardView
+    public var statusView: StatusView
+    public var indicatorView: IndicatorView
+    public var httpClient: HTTPClient
     public var moveMade: Int!
     public var turnCompleted: Bool! = false
     
-    public required init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView, httpClient: HTTPClient) {
-        
+    required public init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView, httpClient: HTTPClient) {
+        self.boardView = boardView
+        self.statusView = statusView
+        self.indicatorView = indicatorView
+        self.httpClient = httpClient
     }
+    
     
     public func startGame(game: Game) {
         
