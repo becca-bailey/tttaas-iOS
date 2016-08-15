@@ -2,7 +2,7 @@ import UIKit
 
 public class MenuViewController: UIViewController {
     var rotation: CGFloat = 0.0
-    var humanVsComputerIsDisplayed = true;
+    public var humanVsComputerIsDisplayed = true;
 
     @IBOutlet weak public var player1MarkerLabel: UILabel!
     @IBOutlet weak public var player2MarkerLabel: UILabel!
@@ -59,14 +59,9 @@ public class MenuViewController: UIViewController {
     }
     
     @IBAction public func newPlayerVsComputerGame(sender: UIButton) {
-        if humanVsComputerIsDisplayed {
-            GameConfig.gameType = GameConfig.humanVsComputer
-            GameConfig.game = PlayerVsComputer()
-        } else {
-            GameConfig.gameType = GameConfig.computerVsHuman
-            GameConfig.game = PlayerVsComputer()
-            GameConfig.game.isXTurn = false
-        }
+        GameConfig.gameType = GameConfig.humanVsComputer
+        GameConfig.game = PlayerVsComputer()
+        GameConfig.game.isXTurn = humanVsComputerIsDisplayed
     }
     
     @IBAction func switchGameType(sender: UIButton) {

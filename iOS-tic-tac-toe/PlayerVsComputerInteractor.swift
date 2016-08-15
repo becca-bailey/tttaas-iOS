@@ -1,11 +1,11 @@
 import Foundation
-public class DefaultGameInteractor: GameInteractor {
+public class PlayerVsComputerInteractor: GameInteractor {
     
     public var game : Game!
-    let httpClient : HTTPClient
-    let boardView : BoardView
-    let statusView : StatusView
-    let indicatorView : IndicatorView
+    public var httpClient : HTTPClient
+    public var boardView : BoardView
+    public var statusView : StatusView
+    public var indicatorView : IndicatorView
     var start = NSDate()
     var end = NSDate()
     
@@ -19,7 +19,7 @@ public class DefaultGameInteractor: GameInteractor {
     
     public func startGame(game: Game) {
         self.game = game
-        if (game.getGameType() == GameConfig.humanVsComputer && game.isXTurn == false) {
+        if (game.isXTurn == false) {
             makeMove(nil)
             self.game.isXTurn = true
             statusView.displayTurn(message: UIConfig.computerTurnMessage)
@@ -28,24 +28,10 @@ public class DefaultGameInteractor: GameInteractor {
         }
     }
     
-    public func resetGame(game: Game) {
-        boardView.clearSpots()
-        boardView.enableSpots()
-        statusView.displayTurn(message: game.getTurnMessage())
-        game.resetGame()
-        startGame(game)
-    }
-    
-    public func warnReset() {
-        statusView.displayTurn(message: "Resetting game...")
-    }
-    
     public func makeMove(spotIndex: Int?) {
         start = NSDate()
         boardView.disableSpots()
-        if (game.getGameType() == GameConfig.humanVsComputer){
-            statusView.displayTurn(message: UIConfig.computerTurnMessage)
-        }
+        statusView.displayTurn(message: UIConfig.computerTurnMessage)
         indicatorView.moveInProgress()
         if let spotIndex = spotIndex {
             game.updateBoard(spotIndex)
@@ -71,37 +57,7 @@ public class DefaultGameInteractor: GameInteractor {
             }
         }
     }
-    
-    public func completeTurn() {
-        indicatorView.moveDone()
-        boardView.enableSpots()
-        if (game.isOver()){
-            endGame()
-        } else {
-            nextTurn()
-        }
-    }
-    
-    public func endGame() {
-        if (game.status == Status.player1Wins) {
-            statusView.displayWinner(player: UIConfig.player1)
-        } else if (game.status == Status.player2Wins){
-            statusView.displayWinner(player: UIConfig.player2)
-        } else if (game.status == Status.tie) {
-            statusView.displayTie()
-        }
-        boardView.disableSpots()
-    }
-    
-    public func nextTurn() {
-        game.changeCurrentPlayer()
-        statusView.displayTurn(message: game.getTurnMessage())
-    }
-
-    public func createJSONRequestBody(game: Game) -> String {
-        return "{\"board\": \(game.board.asArray().description), \"gameType\": \(game.getGameType())}"
-    }
 }
 
 
-    
+
