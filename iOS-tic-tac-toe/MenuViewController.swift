@@ -11,6 +11,7 @@ public class MenuViewController: UIViewController {
     @IBOutlet weak var gameTypeLink: UIButton!
     
     public override func viewDidLoad() {
+        setEnvironment()
         appMovedToForeground()
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
@@ -28,6 +29,15 @@ public class MenuViewController: UIViewController {
     public func displayPlayerMarkers() {
         player1MarkerLabel.text = "Player 1's Marker: \(UIConfig.player1)"
         player2MarkerLabel.text = "Player 2's Marker: \(UIConfig.player2)"
+    }
+    
+    public func setEnvironment() {
+        let environment = NSProcessInfo.processInfo().environment["Environment"]
+        if (environment == "Local") {
+            GameConfig.root = "http://localhost:5000"
+        } else {
+            GameConfig.root = "http://stormy-savannah-24890.herokuapp.com"
+        }
     }
 
     public func setPlayerMarkers() {
