@@ -6,4 +6,4 @@ xcode_sdk:
     - iphonesimulator
 
 script:
-   - xcodebuild -workspace iOS-tic-tac-toe.xcworkspace -scheme Production-iOS-tic-tac-toe -sdk iphonesimulator build clean test
+   - xcodebuild -workspace iOS-tic-tac-toe.xcworkspace -scheme Local-iOS-tic-tac-toe -sdk iphonesimulator build clean test

@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "883621531D369F73007F43D0"
-               BuildableName = "iOS-tic-tac-toeTests.xctest"
-               BlueprintName = "iOS-tic-tac-toeTests"
-               ReferencedContainer = "container:iOS-tic-tac-toe.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
