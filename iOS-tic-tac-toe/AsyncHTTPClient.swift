@@ -10,6 +10,7 @@ class AsyncHTTPClient: HTTPClient{
         request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response, data, error) -> Void in
             if ((error != nil) || (data?.length > 100)) {
+                print(error)
                 self.makePOSTRequest(url, body: body, onCompletion: onCompletion)
             } else {
                 onCompletion(data)
