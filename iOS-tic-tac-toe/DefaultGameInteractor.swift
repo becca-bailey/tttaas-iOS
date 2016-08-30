@@ -1,5 +1,5 @@
 import Foundation
-public class PlayerVsComputerInteractor: GameInteractor {
+public class DefaultGameInteractor: GameInteractor {
     
     public var game : Game!
     public var httpClient : HTTPClient
@@ -37,7 +37,11 @@ public class PlayerVsComputerInteractor: GameInteractor {
             game.updateBoard(spotIndex)
             boardView.show(board: game.board.asArray())
         }
-        httpClient.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+        if (game.getGameType() == GameConfig.humanVsHuman) {
+            httpClient.makeGETRequest(GameConfig.serverStatusURL, parameters: game.board.asParams(), onCompletion: successfulRequest)
+        } else {
+            httpClient.makePOSTRequest(GameConfig.serverMoveURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+        }
     }
     
     public func successfulRequest(data: NSData?) {
@@ -57,6 +61,49 @@ public class PlayerVsComputerInteractor: GameInteractor {
             }
         }
     }
+    
+    public func resetGame(game: Game) {
+        boardView.clearSpots()
+        boardView.enableSpots()
+        statusView.displayTurn(message: game.getTurnMessage())
+        game.resetGame()
+        startGame(game)
+    }
+    
+    public func warnReset() {
+        statusView.displayTurn(message: "Resetting game...")
+    }
+    
+    public func completeTurn() {
+        indicatorView.moveDone()
+        boardView.enableSpots()
+        if (game.isOver()){
+            endGame()
+        } else {
+            nextTurn()
+        }
+    }
+    
+    public func endGame() {
+        if (game.status == Status.player1Wins) {
+            statusView.displayWinner(player: UIConfig.player1)
+        } else if (game.status == Status.player2Wins){
+            statusView.displayWinner(player: UIConfig.player2)
+        } else if (game.status == Status.tie) {
+            statusView.displayTie()
+        }
+        boardView.disableSpots()
+    }
+    
+    public func nextTurn() {
+        game.changeCurrentPlayer()
+        statusView.displayTurn(message: game.getTurnMessage())
+    }
+    
+    public func createJSONRequestBody(game: Game) -> String {
+        return "{\"board\": \(game.board.asArray().description), \"gameType\": \(game.getGameType())}"
+    }
+
 }
 
 

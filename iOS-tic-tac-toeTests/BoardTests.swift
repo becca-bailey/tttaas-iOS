@@ -29,6 +29,11 @@ class BoardSpec: QuickSpec {
                 expect(board.asArray()).to(equal(["", "", "", "", "", "", "", "", ""]))
             }
             
+            it("can get the board as params") {
+                let expectedParams = "?board=%5B%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%2C%20%22%22%5D"
+                expect(board.asParams()).to(equal(expectedParams))
+            }
+            
             it("needs this at the bottom") {
                 expect(true).to(equal(true))
             }

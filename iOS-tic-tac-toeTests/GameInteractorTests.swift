@@ -15,7 +15,7 @@ class GameInteractorTests: QuickSpec {
             mockStatusView = MockStatusView()
             mockIndicatorView = MockIndicatorView()
             mockHTTPClient = MockHTTPClient(board: ["X", "O", "", "", "", "", "", "", ""], status: "in progress")
-            gameInteractor = PlayerVsPlayerInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView, httpClient: mockHTTPClient)
+            gameInteractor = DefaultGameInteractor(boardView: mockBoardView, statusView: mockStatusView, indicatorView: mockIndicatorView, httpClient: mockHTTPClient)
             gameInteractor.game = PlayerVsPlayer()
         }
         

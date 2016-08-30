@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		880337011D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880337001D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift */; };
-		880337031D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880337021D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift */; };
+		880337031D624EE500FB7DA7 /* DefaultGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880337021D624EE500FB7DA7 /* DefaultGameInteractor.swift */; };
 		88054C091D4278150064CE60 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C081D4278150064CE60 /* Status.swift */; };
 		88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88054C0A1D4279850064CE60 /* UIConfig.swift */; };
 		8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826CC491D47BCAF00838C16 /* GameConfig.swift */; };
@@ -64,8 +63,7 @@
 		1E794CE3F7478DA0F6F39BBD /* Pods-iOS-tic-tac-toeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-tic-tac-toeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests.release.xcconfig"; sourceTree = "<group>"; };
 		38008FD060ED225BDB80F083 /* Pods-iOS-tic-tac-toeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-tic-tac-toeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-tic-tac-toeTests/Pods-iOS-tic-tac-toeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		542D8D0F0BD89E5238C3E8BA /* Pods_iOS_tic_tac_toeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_tic_tac_toeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		880337001D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsPlayerInteractor.swift; sourceTree = "<group>"; };
-		880337021D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsComputerInteractor.swift; sourceTree = "<group>"; };
+		880337021D624EE500FB7DA7 /* DefaultGameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGameInteractor.swift; sourceTree = "<group>"; };
 		88054C081D4278150064CE60 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		88054C0A1D4279850064CE60 /* UIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 		8826CC491D47BCAF00838C16 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
@@ -210,6 +208,7 @@
 				88E1747E1D4F971C001B28DA /* Game.swift */,
 				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
 				883621651D36A13F007F43D0 /* GameViewController.swift */,
+				880337021D624EE500FB7DA7 /* DefaultGameInteractor.swift */,
 				88E174991D50F6D6001B28DA /* GameInteractor.swift */,
 				88E1749F1D5101DF001B28DA /* ResponseHandler.swift */,
 			);
@@ -219,7 +218,6 @@
 		88BF9EAE1D75EC8800F0C256 /* PlayerVsPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				880337001D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift */,
 				88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */,
 			);
 			name = PlayerVsPlayer;
@@ -228,7 +226,6 @@
 		88BF9EAF1D75EC9E00F0C256 /* PlayerVsComputer */ = {
 			isa = PBXGroup;
 			children = (
-				880337021D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift */,
 				88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */,
 			);
 			name = PlayerVsComputer;
@@ -461,9 +458,8 @@
 				8826CC4A1D47BCAF00838C16 /* GameConfig.swift in Sources */,
 				88E1748C1D4FDECC001B28DA /* StatusLabelView.swift in Sources */,
 				883621461D369F73007F43D0 /* MenuViewController.swift in Sources */,
-				880337031D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift in Sources */,
+				880337031D624EE500FB7DA7 /* DefaultGameInteractor.swift in Sources */,
 				88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */,
-				880337011D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift in Sources */,
 				88054C0B1D4279850064CE60 /* UIConfig.swift in Sources */,
 				8899C7F31D5232F40013AC76 /* IndicatorView.swift in Sources */,
 				88E174831D4F9A5F001B28DA /* PlayerVsComputer.swift in Sources */,

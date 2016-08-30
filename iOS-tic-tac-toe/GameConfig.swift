@@ -2,7 +2,8 @@ import Foundation
 
 public class GameConfig {
     public static var root = ""
-    public static let serverURL = "\(root)/game"
+    public static let serverMoveURL = "\(root)/api/computer_move"
+    public static let serverStatusURL = "\(root)/api/status"
     public static let humanVsHuman = "humanVsHuman"
     public static let humanVsComputer = "humanVsComputer"
     

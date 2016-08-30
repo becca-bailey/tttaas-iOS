@@ -38,5 +38,17 @@ public class MockInteractor: NSObject, GameInteractor {
         
     }
     
+    public func endGame() {
+    
+    }
+    
+    public func nextTurn() {
+        
+    }
+    
+    public func createJSONRequestBody(game: Game) -> String {
+        return "JSON"
+    }
+    
 
 }
