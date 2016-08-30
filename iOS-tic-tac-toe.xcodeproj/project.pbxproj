@@ -129,16 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		880337041D624EFF00FB7DA7 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				88E174991D50F6D6001B28DA /* GameInteractor.swift */,
-				880337021D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift */,
-				880337001D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift */,
-			);
-			name = Interactors;
-			sourceTree = "<group>";
-		};
 		883621371D369F73007F43D0 = {
 			isa = PBXGroup;
 			children = (
@@ -163,23 +153,12 @@
 		883621421D369F73007F43D0 /* iOS-tic-tac-toe */ = {
 			isa = PBXGroup;
 			children = (
-				883621651D36A13F007F43D0 /* GameViewController.swift */,
-				883621431D369F73007F43D0 /* AppDelegate.swift */,
-				883621451D369F73007F43D0 /* MenuViewController.swift */,
-				883621471D369F73007F43D0 /* Main.storyboard */,
-				8836214A1D369F73007F43D0 /* Assets.xcassets */,
-				8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */,
-				8836214F1D369F73007F43D0 /* Info.plist */,
-				88054C081D4278150064CE60 /* Status.swift */,
-				88054C0A1D4279850064CE60 /* UIConfig.swift */,
-				8899C7F81D5284160013AC76 /* Settings.bundle */,
-				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
-				88E1749B1D50FD60001B28DA /* Board.swift */,
-				88BF9EA91D75E74600F0C256 /* Marker.swift */,
-				880337041D624EFF00FB7DA7 /* Interactors */,
-				88E174961D50E648001B28DA /* Views */,
-				88E174841D4FD90E001B28DA /* Game */,
-				88E174A11D5101E7001B28DA /* HTTP */,
+				88BF9EB01D75ED1200F0C256 /* Menu */,
+				88BF9EAD1D75EC7D00F0C256 /* Tic-Tac-Toe */,
+				88BF9EAB1D75EC1E00F0C256 /* Board */,
+				88BF9EB21D75EDB000F0C256 /* UI */,
+				88BF9EAC1D75EC3200F0C256 /* Status */,
+				88BF9EB11D75ED6B00F0C256 /* Utilities */,
 			);
 			path = "iOS-tic-tac-toe";
 			sourceTree = "<group>";
@@ -200,14 +179,90 @@
 			path = "iOS-tic-tac-toeTests";
 			sourceTree = "<group>";
 		};
-		88E174841D4FD90E001B28DA /* Game */ = {
+		88BF9EAB1D75EC1E00F0C256 /* Board */ = {
 			isa = PBXGroup;
 			children = (
+				88E1749B1D50FD60001B28DA /* Board.swift */,
+				88E174851D4FD9C0001B28DA /* BoardView.swift */,
+				88E174871D4FDA1F001B28DA /* BoardStackView.swift */,
+				88BF9EA91D75E74600F0C256 /* Marker.swift */,
+			);
+			name = Board;
+			sourceTree = "<group>";
+		};
+		88BF9EAC1D75EC3200F0C256 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */,
+				88E174891D4FDDA5001B28DA /* StatusView.swift */,
+				88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */,
+				8899C7F21D5232F40013AC76 /* IndicatorView.swift */,
+				88054C081D4278150064CE60 /* Status.swift */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		88BF9EAD1D75EC7D00F0C256 /* Tic-Tac-Toe */ = {
+			isa = PBXGroup;
+			children = (
+				88BF9EAF1D75EC9E00F0C256 /* PlayerVsComputer */,
+				88BF9EAE1D75EC8800F0C256 /* PlayerVsPlayer */,
 				88E1747E1D4F971C001B28DA /* Game.swift */,
+				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
+				883621651D36A13F007F43D0 /* GameViewController.swift */,
+				88E174991D50F6D6001B28DA /* GameInteractor.swift */,
+				88E1749F1D5101DF001B28DA /* ResponseHandler.swift */,
+			);
+			name = "Tic-Tac-Toe";
+			sourceTree = "<group>";
+		};
+		88BF9EAE1D75EC8800F0C256 /* PlayerVsPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				880337001D624ECF00FB7DA7 /* PlayerVsPlayerInteractor.swift */,
 				88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */,
+			);
+			name = PlayerVsPlayer;
+			sourceTree = "<group>";
+		};
+		88BF9EAF1D75EC9E00F0C256 /* PlayerVsComputer */ = {
+			isa = PBXGroup;
+			children = (
+				880337021D624EE500FB7DA7 /* PlayerVsComputerInteractor.swift */,
 				88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */,
 			);
-			name = Game;
+			name = PlayerVsComputer;
+			sourceTree = "<group>";
+		};
+		88BF9EB01D75ED1200F0C256 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8899C7F81D5284160013AC76 /* Settings.bundle */,
+				883621451D369F73007F43D0 /* MenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		88BF9EB11D75ED6B00F0C256 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8836214F1D369F73007F43D0 /* Info.plist */,
+				883089E31D40137100D79AA7 /* AsyncHTTPClient.swift */,
+				8895E2871D5BBD87003207DB /* HTTPClient.swift */,
+				883621431D369F73007F43D0 /* AppDelegate.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		88BF9EB21D75EDB000F0C256 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				88054C0A1D4279850064CE60 /* UIConfig.swift */,
+				8836214A1D369F73007F43D0 /* Assets.xcassets */,
+				883621471D369F73007F43D0 /* Main.storyboard */,
+				8836214C1D369F73007F43D0 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		88E174931D4FEE2E001B28DA /* Mocks */ = {
@@ -220,29 +275,6 @@
 				8895E2891D5BBF48003207DB /* MockHTTPClient.swift */,
 			);
 			name = Mocks;
-			sourceTree = "<group>";
-		};
-		88E174961D50E648001B28DA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8899C7F21D5232F40013AC76 /* IndicatorView.swift */,
-				8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */,
-				88E174851D4FD9C0001B28DA /* BoardView.swift */,
-				88E174871D4FDA1F001B28DA /* BoardStackView.swift */,
-				88E174891D4FDDA5001B28DA /* StatusView.swift */,
-				88E1748B1D4FDECC001B28DA /* StatusLabelView.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		88E174A11D5101E7001B28DA /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-				88E1749F1D5101DF001B28DA /* ResponseHandler.swift */,
-				883089E31D40137100D79AA7 /* AsyncHTTPClient.swift */,
-				8895E2871D5BBD87003207DB /* HTTPClient.swift */,
-			);
-			name = HTTP;
 			sourceTree = "<group>";
 		};
 		E3BBC9C21684FA412EC1CD07 /* Frameworks */ = {
