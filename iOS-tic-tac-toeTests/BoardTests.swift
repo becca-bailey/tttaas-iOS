@@ -17,12 +17,12 @@ class BoardSpec: QuickSpec {
             }
             
             it("can set a spot to a marker") {
-                board.setSpot(0, marker: "X")
+                board.setSpot(0, marker: Marker(rawValue: "X")!)
                 expect(board.asArray()).to(equal(["X", "", "", "", "", "", "", "", ""]))
             }
             
             it("can reset its values") {
-                board.setSpot(0, marker: "X")
+                board.setSpot(0, marker: Marker(rawValue: "X")!)
                 expect(board.asArray()).to(equal(["X", "", "", "", "", "", "", "", ""]))
 
                 board.clear()

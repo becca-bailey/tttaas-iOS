@@ -14,11 +14,11 @@ extension Game {
         board.setSpot(index, marker: getCurrentPlayerMarkerText())
     }
     
-    public func getCurrentPlayerMarkerText() -> String {
+    public func getCurrentPlayerMarkerText() -> Marker {
         if (isXTurn) {
-            return "X"
+            return Marker.X
         } else {
-            return "O"
+            return Marker.O
         }
     }
     

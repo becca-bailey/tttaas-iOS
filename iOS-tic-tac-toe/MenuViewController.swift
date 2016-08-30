@@ -47,7 +47,7 @@ public class MenuViewController: UIViewController {
             let userDefinedMarker = String(player1Marker!).characters.first
             UIConfig.player1 = String(userDefinedMarker!)
         } else {
-            UIConfig.player1 = "X"
+            UIConfig.player1 = Marker.X.rawValue
         }
         
         let player2Marker = defaults.stringForKey("SettingsPlayer2Marker")
@@ -55,7 +55,7 @@ public class MenuViewController: UIViewController {
             let userDefinedMarker = String(player2Marker!).characters.first
             UIConfig.player2 = String(userDefinedMarker!)
         } else {
-            UIConfig.player2 = "O"
+            UIConfig.player2 = Marker.O.rawValue
         }
     }
     

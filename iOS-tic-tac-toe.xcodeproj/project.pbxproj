@@ -29,6 +29,7 @@
 		8899C7F51D52334A0013AC76 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */; };
 		8899C7F71D5238730013AC76 /* MockIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899C7F61D5238730013AC76 /* MockIndicatorView.swift */; };
 		8899C7F91D5284160013AC76 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8899C7F81D5284160013AC76 /* Settings.bundle */; };
+		88BF9EAA1D75E74600F0C256 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF9EA91D75E74600F0C256 /* Marker.swift */; };
 		88E1747F1D4F971C001B28DA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1747E1D4F971C001B28DA /* Game.swift */; };
 		88E174811D4F9922001B28DA /* PlayerVsPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */; };
 		88E174831D4F9A5F001B28DA /* PlayerVsComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */; };
@@ -89,6 +90,7 @@
 		8899C7F41D52334A0013AC76 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8899C7F61D5238730013AC76 /* MockIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockIndicatorView.swift; sourceTree = "<group>"; };
 		8899C7F81D5284160013AC76 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		88BF9EA91D75E74600F0C256 /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		88E1747E1D4F971C001B28DA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		88E174801D4F9922001B28DA /* PlayerVsPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsPlayer.swift; sourceTree = "<group>"; };
 		88E174821D4F9A5F001B28DA /* PlayerVsComputer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVsComputer.swift; sourceTree = "<group>"; };
@@ -172,8 +174,9 @@
 				88054C0A1D4279850064CE60 /* UIConfig.swift */,
 				8899C7F81D5284160013AC76 /* Settings.bundle */,
 				8826CC491D47BCAF00838C16 /* GameConfig.swift */,
-				880337041D624EFF00FB7DA7 /* Interactors */,
 				88E1749B1D50FD60001B28DA /* Board.swift */,
+				88BF9EA91D75E74600F0C256 /* Marker.swift */,
+				880337041D624EFF00FB7DA7 /* Interactors */,
 				88E174961D50E648001B28DA /* Views */,
 				88E174841D4FD90E001B28DA /* Game */,
 				88E174A11D5101E7001B28DA /* HTTP */,
@@ -416,6 +419,7 @@
 			files = (
 				88E174861D4FD9C0001B28DA /* BoardView.swift in Sources */,
 				88E174A01D5101DF001B28DA /* ResponseHandler.swift in Sources */,
+				88BF9EAA1D75E74600F0C256 /* Marker.swift in Sources */,
 				88E1748A1D4FDDA5001B28DA /* StatusView.swift in Sources */,
 				883089E41D40137100D79AA7 /* AsyncHTTPClient.swift in Sources */,
 				88054C091D4278150064CE60 /* Status.swift in Sources */,
