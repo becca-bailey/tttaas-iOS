@@ -7,4 +7,3 @@ xcode_sdk:
 
 script:
    - xcodebuild -workspace iOS-tic-tac-toe.xcworkspace -scheme Local-iOS-tic-tac-toe -sdk iphonesimulator build clean test
-
