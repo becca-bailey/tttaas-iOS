@@ -7,8 +7,8 @@ public class Board {
         
     }
     
-    public func setSpot(spotIndex : Int, marker: String) {
-        boardArray[spotIndex] = marker
+    public func setSpot(spotIndex : Int, marker: Marker) {
+        boardArray[spotIndex] = marker.rawValue
     }
     
     public func asArray() -> [String]{

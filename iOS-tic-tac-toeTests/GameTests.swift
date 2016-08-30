@@ -18,14 +18,14 @@ class GameTests: QuickSpec {
                 game.isXTurn = true
                 let playerMarker = game.getCurrentPlayerMarkerText()
             
-                expect(playerMarker).to(equal("X"))
+                expect(playerMarker).to(equal(Marker(rawValue: "X")!))
             }
 
             it("can get the correct marker if it's player 2's turn") {
                 game.isXTurn = false
                 let playerMarker = game.getCurrentPlayerMarkerText()
                 
-                expect(playerMarker).to(equal("O"))
+                expect(playerMarker).to(equal(Marker(rawValue: "O")!))
             }
 
             it ("can record moves made in the board array") {
