@@ -1,3 +1,5 @@
+import Foundation
+
 public class Board {
     
     public var boardArray = ["", "", "", "", "", "", "", "", ""]
@@ -13,6 +15,11 @@ public class Board {
     
     public func asArray() -> [String]{
         return boardArray
+    }
+    
+    public func asParams() -> String {
+        let allowedCharacterSet = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~")
+        return "?board=\(boardArray.description.stringByAddingPercentEncodingWithAllowedCharacters(allowedCharacterSet)!)"
     }
     
     public func clear() {

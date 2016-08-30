@@ -37,7 +37,7 @@ public class PlayerVsComputerInteractor: GameInteractor {
             game.updateBoard(spotIndex)
             boardView.show(board: game.board.asArray())
         }
-        httpClient.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+        httpClient.makePOSTRequest(GameConfig.serverMoveURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
     }
     
     public func successfulRequest(data: NSData?) {

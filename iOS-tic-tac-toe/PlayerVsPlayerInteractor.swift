@@ -24,7 +24,7 @@ public class PlayerVsPlayerInteractor: GameInteractor {
         indicatorView.moveInProgress()
         game.updateBoard(spotIndex!)
         boardView.show(board: game.board.asArray())
-        httpClient.makePOSTRequest(GameConfig.serverURL, body: createJSONRequestBody(game), onCompletion: successfulRequest)
+        httpClient.makeGETRequest(GameConfig.serverStatusURL, parameters: game.board.asParams(), onCompletion: successfulRequest)
     }
     
     public func successfulRequest(data: NSData?) {

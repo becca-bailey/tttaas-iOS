@@ -17,4 +17,17 @@ class AsyncHTTPClient: HTTPClient{
             }
         });
     }
+    
+    
+    func makeGETRequest(url: String, parameters: String, onCompletion: (NSData?) -> ()){
+        let request = NSMutableURLRequest(URL: NSURL(string: "\(url)\(parameters)")!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response, data, error) -> Void in
+            if ((error != nil) || (data?.length > 100)) {
+                print(error)
+            } else {
+                onCompletion(data)
+                //accept parsed data
+            }
+        });
+    }
 }

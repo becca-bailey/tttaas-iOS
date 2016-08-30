@@ -12,5 +12,10 @@ public class MockHTTPClient: HTTPClient {
         self.requestMade = true
         onCompletion(responseData)
     }
+    
+    public func makeGETRequest(url:String, parameters: String, onCompletion: (NSData?) -> ()){
+        self.requestMade = true
+        onCompletion(responseData)
+    }
 
 }
