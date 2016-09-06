@@ -1,10 +1,5 @@
 public protocol GameInteractor {
-    var game: Game! {get set}
-    var boardView: BoardView {get set}
-    var statusView: StatusView {get set}
-    var indicatorView: IndicatorView {get set}
-    var httpClient: HTTPClient {get set}
-    
+
     init(boardView: BoardView, statusView: StatusView, indicatorView: IndicatorView, httpClient: HTTPClient)
     func startGame(game: Game)
     func makeMove(spotIndex: Int?)

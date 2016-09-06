@@ -4,7 +4,7 @@ import Nimble
 
 class GameInteractorTests: QuickSpec {
     override func spec() {
-        var gameInteractor: GameInteractor!
+        var gameInteractor: DefaultGameInteractor!
         var mockBoardView: MockBoardView!
         var mockStatusView: MockStatusView!
         var mockIndicatorView: MockIndicatorView!
